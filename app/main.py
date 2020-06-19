@@ -53,6 +53,8 @@ def postJsonStep():
     return result
 
 
+
+
 @bp.route('/hello', methods=['GET', 'POST'])
 def hello_world():
-    return "Hello World !"
+    return "Hello World ! You test the flask version"

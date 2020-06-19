@@ -11,6 +11,7 @@ MarkupSafe==1.1.1
 mccabe==0.6.1
 pycodestyle==2.6.0
 pylint==2.5.3
+redis
 six==1.15.0
 toml==0.10.1
 typed-ast==1.4.1

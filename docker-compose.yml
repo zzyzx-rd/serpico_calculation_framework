@@ -1,10 +1,8 @@
-version: '3.4'
-
+version: '3'
 services:
-  pythonresultscompute:
-    image: pythonresultscompute
-    build:
-      context: .
-      dockerfile: Dockerfile
+  web:
+    build: .
     ports:
-      - 5000
+      - "127.0.0.1:5000:5000"
+  redis:
+    image: "redis:alpine"

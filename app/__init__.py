@@ -1,6 +1,8 @@
 import os
 
 from flask import Flask
+import redis
+import time
 
 
 def create_app(test_config=None):
@@ -11,6 +13,7 @@ def create_app(test_config=None):
     """
     # create and configure the app
     app = Flask(__name__, instance_relative_config=True)
+    cache = redis.Redis(host='redis', port=6379)
     # Load the default config
     if test_config is None:
         # load the instance config, if it exists, when not testing
@@ -26,14 +29,24 @@ def create_app(test_config=None):
     except OSError:
         pass
 
-    @app.route("/hello", methods=['POST', 'GET'])
+    def get_hit_count():
+        retries = 5
+        while True:
+            try:
+                return cache.incr('hits')
+            except redis.exceptions.ConnectionError as exc:
+                if retries == 0:
+                    raise exc
+                retries -= 1
+                time.sleep(0.5)
+
+    @app.route('/')
     def hello():
-        return "Hello, World!"
+        count = get_hit_count()
+        return 'Hello World! I have been seen {} times.\n'.format(count)
 
     # Import the function in the main function
     from app import main
     app.register_blueprint(main.bp)
 
-
     return app
-

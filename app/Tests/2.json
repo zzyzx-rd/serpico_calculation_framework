@@ -1,0 +1,150 @@
+{
+    "user": ["1","2", "3", "4"],
+    "team": ["1", "2"],
+    "critaria1": {
+        "weight": 70,
+        "averageUsersWeightedResult": 11.56,
+        "averageUsersEqualResult": 10.67,
+        "averageTeamsWeightedResult": 11.22,
+        "averageTeamsEqualResult": 10.0,
+        "averageUsersWeightedRelativeResult": 0.58,
+        "averageUsersEqualRelativeResult": 0.53,
+        "averageTeamsWeightedRelativeResult": 0.56,
+        "averageTeamsEqualRelativeResult": 0.5,
+        "averageUsersWeightedStdDev": 1.92,
+        "averageUsersEqualStdDev": 3.3,
+        "averageTeamsWeightedStdDev": 1.54,
+        "averageTeamsEqualStdDev": 3.5,
+        "maxUsersWeightedStdDev": 12.32,
+        "maxUsersEqualStdDev": 8.66,
+        "maxTeamsWeightedStdDev": 15.91,
+        "maxTeamsEqualStdDev": 18.93,
+        "weightedUserInertia": 5.01,
+        "equalUserInertia": 11.61,
+        "weightedTeamInertia": 2.06,
+        "equalTeamInertia": 4.08,
+        "maxWeightedUserInertia": 151.69,
+        "maxEqualUserInertia": 75.0,
+        "maxWeightedTeamInertia": 253.15,
+        "maxEqualTeamInertia": 358.25,
+        "weightedUserDevRatio": 0.03,
+        "equalUserDevRatio": 0.15,
+        "weightedTeamDevRatio": 0.01,
+        "equalTeamDevRatio": 0.01,
+        "user": {
+            "2": {
+                "weightedResult": 15.0,
+                "equalResult": 15.0
+            },
+            "3": {
+                "weightedResult": 9.0,
+                "equalResult": 7.5,
+                "weightedStdDev": 2.25,
+                "equalStdDev": 4.5,
+                "weightedDevRatio": 0.18,
+                "equalDevRatio": 0.52
+            },
+            "4": {
+                "weightedResult": 11.75,
+                "equalResult": 9.5,
+                "weightedStdDev": 1.0,
+                "equalStdDev": 2.5,
+                "weightedDevRatio": 0.08,
+                "equalDevRatio": 0.29
+            },
+            "1": {
+                "weightedStdDev": 4.57,
+                "equalStdDev": 2.89,
+                "weightedDevRatio": 0.37,
+                "equalDevRatio": 0.33
+            }
+        },
+        "team": {
+            "1": {
+                "weightedResult": 5.0,
+                "equalResult": 5.0,
+                "weightedStdDev": 1.54,
+                "equalStdDev": 3.5,
+                "weightedDevRatio": 0.1,
+                "equalDevRatio": 0.22
+            },
+            "2": {
+                "weightedResult": 16.67,
+                "equalResult": 15.0
+            }
+        }
+    },
+    "criteria2": {
+        "weight": 30,
+        "averageUsersWeightedResult": 11.56,
+        "averageUsersEqualResult": 10.67,
+        "averageTeamsWeightedResult": 11.22,
+        "averageTeamsEqualResult": 10.0,
+        "averageUsersWeightedRelativeResult": 0.58,
+        "averageUsersEqualRelativeResult": 0.53,
+        "averageTeamsWeightedRelativeResult": 0.56,
+        "averageTeamsEqualRelativeResult": 0.5,
+        "averageUsersWeightedStdDev": 1.92,
+        "averageUsersEqualStdDev": 3.3,
+        "averageTeamsWeightedStdDev": 1.54,
+        "averageTeamsEqualStdDev": 3.5,
+        "maxUsersWeightedStdDev": 12.32,
+        "maxUsersEqualStdDev": 8.66,
+        "maxTeamsWeightedStdDev": 15.91,
+        "maxTeamsEqualStdDev": 18.93,
+        "weightedUserInertia": 5.01,
+        "equalUserInertia": 11.61,
+        "weightedTeamInertia": 2.06,
+        "equalTeamInertia": 4.08,
+        "maxWeightedUserInertia": 151.69,
+        "maxEqualUserInertia": 75.0,
+        "maxWeightedTeamInertia": 253.15,
+        "maxEqualTeamInertia": 358.25,
+        "weightedUserDevRatio": 0.03,
+        "equalUserDevRatio": 0.15,
+        "weightedTeamDevRatio": 0.01,
+        "equalTeamDevRatio": 0.01,
+        "user": {
+            "2": {
+                "weightedResult": 15.0,
+                "equalResult": 15.0
+            },
+            "3": {
+                "weightedResult": 9.0,
+                "equalResult": 7.5,
+                "weightedStdDev": 2.25,
+                "equalStdDev": 4.5,
+                "weightedDevRatio": 0.18,
+                "equalDevRatio": 0.52
+            },
+            "4": {
+                "weightedResult": 11.75,
+                "equalResult": 9.5,
+                "weightedStdDev": 1.0,
+                "equalStdDev": 2.5,
+                "weightedDevRatio": 0.08,
+                "equalDevRatio": 0.29
+            },
+            "1": {
+                "weightedStdDev": 4.57,
+                "equalStdDev": 2.89,
+                "weightedDevRatio": 0.37,
+                "equalDevRatio": 0.33
+            }
+        },
+        "team": {
+            "1": {
+                "weightedResult": 5.0,
+                "equalResult": 5.0,
+                "weightedStdDev": 1.54,
+                "equalStdDev": 3.5,
+                "weightedDevRatio": 0.1,
+                "equalDevRatio": 0.22
+            },
+            "2": {
+                "weightedResult": 16.67,
+                "equalResult": 15.0
+            }
+        }
+    }
+}

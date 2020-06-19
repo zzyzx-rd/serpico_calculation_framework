@@ -1,0 +1,144 @@
+{
+  "averageUsersWeightedResult": 11.76,
+  "averageUsersEqualResult": 11.41,
+  "averageTeamsWeightedResult": 12.48,
+  "averageTeamsEqualResult": 11.5,
+  "averageUsersWeightedRelativeResult": 0.57,
+  "averageUsersEqualRelativeResult": 0.55,
+  "averageTeamsWeightedRelativeResult": 0.60,
+  "averageTeamsEqualRelativeResult": 0.55,
+  "averageUsersWeightedStdDev": 4.32,
+  "averageUsersEqualStdDev": 4.91,
+  "averageTeamsWeightedStdDev": 4.03,
+  "averageTeamsEqualStdDev": 4.87,
+  "maxUsersWeightedStdDev": 11.09,
+  "maxUsersEqualStdDev": 10.56,
+  "maxTeamsWeightedStdDev": 11.92,
+  "maxTeamsEqualStdDev": 11.51,
+  "weightedUserInertia": 19.62,
+  "equalUserInertia": 24.08,
+  "weightedTeamInertia": 17.36,
+  "equalTeamInertia": 24.13,
+  "maxWeightedUserInertia": 123.08,
+  "maxEqualUserInertia": 111.49,
+  "maxWeightedTeamInertia": 142.06,
+  "maxEqualTeamInertia": 132.42,
+  "weightedUserDevRatio": 0.16,
+  "equalUserDevRatio": 0.22,
+  "weightedTeamDevRatio": 0.12,
+  "equalTeamDevRatio": 0.18,
+  "user": {
+    "3": {
+      "weightedResult": 13.64,
+      "equalResult": 12.5,
+      "weightedRelativeResult": 0.67,
+      "equalRelativeResult": 0.61,
+      "weightedStdDev": 3.44,
+      "equalStdDev": 4.69,
+      "weightedDevRatio": 0.31,
+      "equalDevRatio": 0.44
+    },
+    "4": {
+      "weightedResult": 11.10,
+      "equalResult": 10,
+      "weightedRelativeResult": 0.53,
+      "equalRelativeResult": 0.47,
+      "weightedStdDev": 2.41,
+      "equalStdDev": 4.62,
+      "weightedDevRatio": 0.22,
+      "equalDevRatio":0.43
+    },
+    "5": {
+      "weightedResult": 13.63,
+      "equalResult": 12.25,
+      "weightedRelativeResult": 0.66,
+      "equalRelativeResult": 0.59,
+      "weightedStdDev": 3.72,
+      "equalStdDev": 3.85,
+      "weightedDevRatio": 0.34,
+      "equalDevRatio":0.36
+    },
+    "6": {
+      "weightedResult": 10.69,
+      "equalResult": 11.25,
+      "weightedRelativeResult": 0.51,
+      "equalRelativeResult": 0.54,
+      "weightedStdDev": 5.40,
+      "equalStdDev": 5.76,
+      "weightedDevRatio": 0.49,
+      "equalDevRatio": 0.54
+    },
+    "7": {
+      "weightedResult": 11.53,
+      "equalResult": 11.6,
+      "weightedRelativeResult": 0.55,
+      "equalRelativeResult":0.56
+    },
+    "8": {
+      "weightedResult": 10.65,
+      "equalResult": 10.4,
+      "weightedRelativeResult": 0.51,
+      "equalRelativeResult":0.49
+    },
+    "9": {
+      "weightedResult": 9.77,
+      "equalResult": 10.75,
+      "weightedRelativeResult": 0.46,
+      "equalRelativeResult":0.51
+    },
+    "10": {
+      "weightedResult": 14,
+      "equalResult": 12.5,
+      "weightedRelativeResult": 0.68,
+      "equalRelativeResult": 0.61,
+      "weightedStdDev": 5,
+      "equalStdDev": 6.5,
+      "weightedDevRatio": 0.45,
+      "equalDevRatio": 0.62
+    },
+    "1": {
+      "weightedStdDev": 5.36,
+      "equalStdDev": 4.61,
+      "weightedDevRatio": 0.48,
+      "equalDevRatio": 0.44
+    },
+    "2": {
+      "weightedStdDev": 3.64,
+      "equalStdDev": 4.33,
+      "weightedDevRatio": 0.33,
+      "equalDevRatio": 0.41
+    }
+  },
+  "team": {
+    "1": {
+      "weightedResult": 12.6,
+      "equalResult": 12.5,
+      "weightedRelativeResult": 0.61,
+      "equalRelativeResult": 0.61,
+      "weightedStdDev": 3.81,
+      "equalStdDev": 4.38,
+      "weightedDevRatio": 0.32,
+      "equalDevRatio":0.38
+    },
+    "2": {
+      "weightedResult": 9.93,
+      "equalResult": 9,
+      "weightedRelativeResult": 0.47,
+      "equalRelativeResult": 0.42,
+      "weightedStdDev": 2.82,
+      "equalStdDev": 4.48,
+      "weightedDevRatio": 0.24,
+      "equalDevRatio":0.39
+    },
+    "3": {
+      "weightedResult": 14.71,
+      "equalResult": 13,
+      "weightedRelativeResult": 0.72,
+      "equalRelativeResult": 0.63,
+      "weightedStdDev": 5.40,
+      "equalStdDev": 5.76,
+      "weightedDevRatio": 0.45,
+      "equalDevRatio":0.50
+    }
+  }
+}

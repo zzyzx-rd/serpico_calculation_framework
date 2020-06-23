@@ -3,55 +3,88 @@ per-stage results computation module
 
 Python | Flask | Gunicorn | Docker
 
-## Installation
-After pulling, in **project root** do the following:
+## Creating the virtual environement
+If you want to test it without launcing with docker, you must install the virtual environement, with doing following : 
 Create a `venv` folder
+
 ```
-$ python3.7 -m venv venv
+ $ python3.7 -m venv venv
 ```
-$ Activate the environment (it should be shown in your shell)
-```
-$ . venv/bin/activate
-```
-Install all the requirements
+Activate the environment (it should be shown in your shell if you use zsh for example)
+
+    $ . venv/bin/activate
+
+Install all the requirements in the virtual env.
 ```
 $ pip install -r requirements.txt
 ```
 ## Deployement
-### Local tests
-This app is deployed with [gunicorn](https://docs.gunicorn.org/en/latest/index.html), and [docker](https://docs.docker.com/)
+This app is deployed with  [docker](https://docs.docker.com/) and docker-compose
+### Local deployment
 To deploy localy, go in the root of the project.
-#### Build the image: 
+#### Build the container
+The container must  be rebuilt after modifications in the sources files. To rebuild the container image, do : 
 ```
-$ docker build --tag nameimage:1.0 .
+$ docker-compose build
 ```
-(```nameimage```is case sensitive, and must be lowercase). It can be waht you want.
-It should display something like
+It will take some times (one or two minutes), and should dipslay someting like : 
 ```
-Sending build context to Docker daemon  25.56MB
-...
-Successfully built 51cb3ac30e9c
-Successfully tagged nameimage:1.0
+redis uses an image, skipping
+Building web
+Step 1/9 : FROM python:3.7-alpine
+ ---> 6a5ca85ed89b
+Step 2/9 : WORKDIR /app
+ ---> Using cache
+ ---> b1064f77a3d3
+Step 3/9 : ENV FLASK_APP "app:create_app()"
+ ---> Using cache
+ ---> a133cf7430e0
+Step 4/9 : ENV FLASK_RUN_HOST 0.0.0.0
+ ---> Using cache
+ ---> 659d65ab52f6
+Step 5/9 : RUN apk add --no-cache gcc musl-dev linux-headers
+ ---> Using cache
+ ---> 45aa80ff3881
+Step 6/9 : COPY requirements.txt requirements.txt
+ ---> Using cache
+ ---> e813e0834dac
+Step 7/9 : RUN pip install -r requirements.txt
+ ---> Using cache
+ ---> a5a1bdd652fe
+Step 8/9 : COPY . .
+ ---> 391d236e4bfb
+Step 9/9 : CMD ["flask", "run"]
+ ---> Running in 94e3f2426a16
+Removing intermediate container 94e3f2426a16
+ ---> 69d4d7d0c604
+Successfully built 69d4d7d0c604
+Successfully tagged serpico_calculation_framework_web:latest
 ```
-#### Run the image
+#### Run the container :
 ```
-$ docker run --publish 5000:8080 --detach --name containername nameimage:1.0
+$ docker-compsoe up
 ```
-It should display something like : 
-```
-43ae85f092d5a7d2b5b898b2cc9bbb78e7e74ec2978fb9faaf6be0ac2b666bd5
-```
-To check every thing works correctly, go on [hello world](http://localhost:5000/hello). 
 
-#### Kill the contener
-To stop and delete the container, just run :
+It will display something like : 
 ```
-$ docker rm --force contenername 
+***
+redis_1  | 1:M 22 Jun 2020 12:24:20.457 * Loading RDB produced by version 6.0.5
+redis_1  | 1:M 22 Jun 2020 12:24:20.457 * RDB age 233365 seconds
+redis_1  | 1:M 22 Jun 2020 12:24:20.457 * RDB memory usage when created 0.77 Mb
+redis_1  | 1:M 22 Jun 2020 12:24:20.457 * DB loaded from disk: 0.001 seconds
+redis_1  | 1:M 22 Jun 2020 12:24:20.457 * Ready to accept connections
+web_1    |  * Serving Flask app "app:create_app()"
+web_1    |  * Environment: production
+web_1    |    WARNING: This is a development server. Do not use it in a production deployment.
+web_1    |    Use a production WSGI server instead.
+web_1    |  * Debug mode: off
+web_1    |  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
 ```
-It should display :
+To check your container is running, go on [hello world](http://0.0.0.0:5000/), you should see 
 ```
-contenername
+Hello World! I have been seen x times.
 ```
+(x increment)
 ## Flask help
 ### Launch the app (in dev mode, for local tests)
 Commands to launch the app.
@@ -71,14 +104,3 @@ It should display something like
  * Debugger PIN: 295-924-858
 ```
 
-### Add external users
-**Warning** Don't do this on debbuging mode (other users can run any code they want on your machine)
-Disable the debbugong mode, or trust the users, and run :
-```
-$ flask run --host=0.0.0.0
- ```
-
-### debbug mode
-``` 
-$ export FLASK_ENV=development 
- ```

@@ -468,4 +468,3 @@ $send_data = "{
   # Print response.
   print("it should append something");
   echo "<pre>$result</pre>";
-  

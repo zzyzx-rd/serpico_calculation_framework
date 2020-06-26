@@ -111,11 +111,11 @@ curl_setopt( $curl, CURLOPT_HTTPHEADER, array('Content-Type:application/json'));
 # Return response instead of printing.
 curl_setopt( $curl, CURLOPT_RETURNTRANSFER, true );
 # Send request.
-$result = curl_exec($curl);
+// $result = curl_exec($curl);
 curl_close($curl);
 # Print response.
 #print("it should append something");
-print_r($result);
+// print_r($result);
 
 $request_url  = 'http://127.0.0.1:5000/main/stageComputation';
 $curl = curl_init( $request_url );

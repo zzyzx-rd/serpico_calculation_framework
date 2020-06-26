@@ -84,21 +84,18 @@ def averageIndividual(jsonData, entityType, entity_key, key):
     """
     average = 0
     sumWeight = 0
+    defined = False
     # loop on the elements (criteria or stage)
     for element_key, element in jsonData.items():
-        print("key : ", key, file=sys.stderr)
-        print("element_key : ", element_key, file=sys.stderr)
         # if the element is not the dictionary with the user or team's data
         if not element_key in ENTITY_TYPES:
-            print("element : ", element, file=sys.stderr)
-            print("element[entityType] : ", element[entityType], file=sys.stderr)
-            print("element[entityType][entity_key].keys() : ", element[entityType][entity_key].keys(), file=sys.stderr)
             # if the entity has the value for this step
             if entity_key in element[entityType].keys() and key in element[entityType][entity_key].keys():
                 average += element[entityType][entity_key][key] * element["weight"]
                 sumWeight += element["weight"]
+                defined = True
     # the average can be not defined (for example the weightedResult for a third member)
-    if average:
+    if defined:
         return average / sumWeight
 
 
@@ -120,6 +117,7 @@ def computeResult(jsonData, answerFile=None):
         result[entity_type] = {}
         # loop on the entities (user or team)
         for entityKey in jsonData[entity_type]:
+            entityKey = str(entityKey)
             result[entity_type][entityKey] = {}
             # Loop on the values to calculate
             for key in INDIVIDUAL_KEYS:

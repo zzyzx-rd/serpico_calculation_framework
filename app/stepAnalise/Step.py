@@ -43,6 +43,8 @@ calculated individual values
 INDIVIDUAL_KEYS = [
     "weightedResult",
     "equalResult",
+    "weightedRelativeResult",
+    "equalRelativeResult",
     "weightedStdDev",
     "equalStdDev",
     "weightedDevRatio",
@@ -84,8 +86,13 @@ def averageIndividual(jsonData, entityType, entity_key, key):
     sumWeight = 0
     # loop on the elements (criteria or stage)
     for element_key, element in jsonData.items():
+        print("key : ", key, file=sys.stderr)
+        print("element_key : ", element_key, file=sys.stderr)
         # if the element is not the dictionary with the user or team's data
         if not element_key in ENTITY_TYPES:
+            print("element : ", element, file=sys.stderr)
+            print("element[entityType] : ", element[entityType], file=sys.stderr)
+            print("element[entityType][entity_key].keys() : ", element[entityType][entity_key].keys(), file=sys.stderr)
             # if the entity has the value for this step
             if entity_key in element[entityType].keys() and key in element[entityType][entity_key].keys():
                 average += element[entityType][entity_key][key] * element["weight"]
@@ -120,6 +127,7 @@ def computeResult(jsonData, answerFile=None):
                 # if the value is defined (ex : weightedResult not defined for a third)
                 if result[entity_type][entityKey][key] is not None:
                     result[entity_type][entityKey][key] = round(result[entity_type][entityKey][key], 2)
+    result = {"step": result}
     # if the answer must be written in an answer file (for testsà
     if answerFile is not None:
         with open(answerFile, 'w', encoding='utf-8') as f:

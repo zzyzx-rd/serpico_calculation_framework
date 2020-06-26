@@ -24,7 +24,10 @@ def getCriteriasId(jsonData):
 
 def getTeams(jsonData):
     """returns the dictionary with the composition of the teams {team id: [user_id]}"""
-    return jsonData["teams"]
+    if "teams" in jsonData.keys() and jsonData["teams"] != []:
+        return jsonData["teams"]
+    else:
+        return None
 
 
 def getLowerBound(jsonData, criteria_id):
@@ -58,8 +61,10 @@ def getTeamWeights(jsonData):
     @param jsonData : the dictionary with the data
     @return a dictionary with the weights {team_id : user_weight}
     """
-    return jsonData['teamWeights']
-
+    if 'teamWeights' in jsonData.keys():
+        return jsonData['teamWeights']
+    else:
+        return None
 
 def getUserGrades(jsonData, criteriaId):
     """ returns the dictionary with the user's grades

@@ -20,14 +20,10 @@ $send_data =
       \"11\": 1100
     },
     \"teams\": {
-      \"1\": [\"1\", \"3\", \"5\", \"7\"],
-      \"2\": [\"2\",\"4\", \"8\"],
-      \"3\": [\"6\", \"9\"]
+
     },
     \"teamWeights\": {
-      \"1\": 1600,
-      \"2\": 1400,
-      \"3\": 1500
+
     },
     \"criterias\": {
         \"crit1\": {
@@ -66,27 +62,7 @@ $send_data =
                 }
             },
             \"teamGrades\": {
-                \"1\": {
-                    \"2\": 8,
-                    \"3\": 7
-                },
-                \"2\": {
-                    \"3\": 16
-                },
-                \"3\": {
-                    \"2\": 7
-                },
-                \"4\": {
-                    \"1\": 12,
-                    \"3\": 16
-                },
-                \"5\": {
-                    \"2\": 6
-                },
-                \"6\": {
-                    \"1\": 13,
-                    \"2\": 15
-                }
+
             }
         },
         \"crit2\": {
@@ -125,27 +101,7 @@ $send_data =
                 }
             },
             \"teamGrades\": {
-                \"1\": {
-                    \"2\": 8,
-                    \"3\": 7
-                },
-                \"2\": {
-                    \"3\": 16
-                },
-                \"3\": {
-                    \"2\": 7
-                },
-                \"4\": {
-                    \"1\": 12,
-                    \"3\": 16
-                },
-                \"5\": {
-                    \"2\": 6
-                },
-                \"6\": {
-                    \"1\": 13,
-                    \"2\": 15
-                }
+
             }
         }
     }
@@ -158,8 +114,8 @@ curl_setopt( $curl, CURLOPT_RETURNTRANSFER, true );
 $result = curl_exec($curl);
 curl_close($curl);
 # Print response.
-print("it should append something");
-echo "<pre>$result</pre>";
+#print("it should append something");
+print_r($result);
 
 $request_url  = 'http://127.0.0.1:5000/main/stageComputation';
 $curl = curl_init( $request_url );
@@ -458,6 +414,8 @@ $send_data = "{
       }
   }";
 
+  $send_data = "{\"user\": [298, 284], \"team\": [], \"821\": {\"averageUsersWeightedResult\": 2.5, \"averageUsersEqualResult\": 2.5, \"averageTeamsWeightedResult\": 0, \"averageTeamsEqualResult\": 0, \"averageUsersWeightedRelativeResult\": 0.5, \"averageUsersEqualRelativeResult\": 0.5, \"averageTeamsWeightedRelativeResult\": 0, \"averageTeamsEqualRelativeResult\": 0, \"averageUsersWeightedStdDev\": 0, \"averageUsersEqualStdDev\": 0, \"averageTeamsWeightedStdDev\": 0, \"averageTeamsEqualStdDev\": 0, \"maxUsersWeightedStdDev\": 3, \"maxUsersEqualStdDev\": 3, \"maxTeamsWeightedStdDev\": 0, \"maxTeamsEqualStdDev\": 0, \"weightedUserInertia\": 0, \"equalUserInertia\": 0, \"weightedTeamInertia\": 0, \"equalTeamInertia\": 0, \"maxWeightedUserInertia\": 9, \"maxEqualUserInertia\": 9, \"maxWeightedTeamInertia\": 0, \"maxEqualTeamInertia\": 0, \"weightedUserDevRatio\": 0, \"equalUserDevRatio\": 0, \"weightedTeamDevRatio\": 0, \"equalTeamDevRatio\": 0, \"user\": {\"298\": {\"weightedResult\": 2, \"equalResult\": 2, \"weightedRelativeResult\": 0.4, \"equalRelativeResult\": 0.4}, \"284\": {\"weightedResult\": 3, \"equalResult\": 3, \"weightedRelativeResult\": 0.6, \"equalRelativeResult\": 0.6, \"weightedStdDev\": 0, \"equalStdDev\": 0, \"weightedDevRatio\": 0, \"equalDevRatio\": 0}}, \"team\": [], \"weight\": 0.7}, \"822\": {\"averageUsersWeightedResult\": 4.5, \"averageUsersEqualResult\": 4.5, \"averageTeamsWeightedResult\": 0, \"averageTeamsEqualResult\": 0, \"averageUsersWeightedRelativeResult\": 0.9, \"averageUsersEqualRelativeResult\": 0.9, \"averageTeamsWeightedRelativeResult\": 0, \"averageTeamsEqualRelativeResult\": 0, \"averageUsersWeightedStdDev\": 0, \"averageUsersEqualStdDev\": 0, \"averageTeamsWeightedStdDev\": 0, \"averageTeamsEqualStdDev\": 0, \"maxUsersWeightedStdDev\": 4.53, \"maxUsersEqualStdDev\": 4.53, \"maxTeamsWeightedStdDev\": 0, \"maxTeamsEqualStdDev\": 0, \"weightedUserInertia\": 0, \"equalUserInertia\": 0, \"weightedTeamInertia\": 0, \"equalTeamInertia\": 0, \"maxWeightedUserInertia\": 20.5, \"maxEqualUserInertia\": 20.5, \"maxWeightedTeamInertia\": 0, \"maxEqualTeamInertia\": 0, \"weightedUserDevRatio\": 0, \"equalUserDevRatio\": 0, \"weightedTeamDevRatio\": 0, \"equalTeamDevRatio\": 0, \"user\": {\"298\": {\"weightedResult\": 4, \"equalResult\": 4, \"weightedRelativeResult\": 0.8, \"equalRelativeResult\": 0.8}, \"284\": {\"weightedResult\": 5, \"equalResult\": 5, \"weightedRelativeResult\": 1, \"equalRelativeResult\": 1, \"weightedStdDev\": 0, \"equalStdDev\": 0, \"weightedDevRatio\": 0, \"equalDevRatio\": 0}}, \"team\": [], \"weight\": 0.3}}";
+
   curl_setopt( $curl, CURLOPT_POSTFIELDS, $send_data );
   curl_setopt( $curl, CURLOPT_HTTPHEADER, array('Content-Type:application/json'));
   # Return response instead of printing.
@@ -465,6 +423,29 @@ $send_data = "{
   # Send request.
   $result = curl_exec($curl);
   curl_close($curl);
-  # Print response.
-  print("it should append something");
-  echo "<pre>$result</pre>";
+# Print response.
+$json = '{"a":1,"b":2,"c":3,"d":4,"e":5}';
+$json = json_decode($json);
+print_r($json);
+  #print($result);
+  $resultA = json_decode($result, true);
+//   echo "\nResult : ";
+  print_r($resultA);
+  foreach ($resultA as $key => $value) {
+    echo "key : ";  
+    echo $key ;
+      echo "\n  value : ";
+    //   print_r($value);
+      echo gettype($value);
+      #echo "\n  ";
+      foreach ($value as $key2 => $value2) {
+        echo $key2 ;
+        echo "\n    ";
+        echo gettype($value2);
+        echo "\n ";
+        // echo $resultA[$key];
+        #echo "\n";      
+      }
+      echo "\n";
+  }
+  #echo $resultA['crit1']["user"];

@@ -31,10 +31,11 @@ class GradedUser(Gradable):
         should be called only by the constructor
         """
         self.team_id = None
-        for teamId, teamMember in jr.getTeams(self._jsonData).items():
-            if self.id in teamMember:
-                self.team_id = teamId
-                break
+        if jr.getTeams(self._jsonData) is not None:
+            for teamId, teamMember in jr.getTeams(self._jsonData).items():
+                if self.id in teamMember:
+                    self.team_id = teamId
+                    break
 
     def setGrades(self):
         """ Sets grades attribute with the grades in the json
@@ -51,12 +52,15 @@ class GradedUser(Gradable):
                 self.grades.append((user_grades[self.id], jr.getUserWeight(self._jsonData, grader)))
                 self.totalWeight += jr.getUserWeight(self._jsonData, grader)
                 self.numberGrader += 1
+        if self.totalWeight == 0:
+            self.totalWeight += 1
         # Loop on the team results (if necessary)
-        for grader, team_grades in jr.getTeamGrades(self._jsonData, self.criteria_id).items():
-            if self.team_id in team_grades.keys():
-                self.grades.append((team_grades[self.team_id], jr.getUserWeight(self._jsonData, grader)))
-                self.totalWeight += jr.getUserWeight(self._jsonData, grader)
-                self.numberGrader += 1
+        if self.team_id is not None:
+            for grader, team_grades in jr.getTeamGrades(self._jsonData, self.criteria_id).items():
+                if self.team_id in team_grades.keys():
+                    self.grades.append((team_grades[self.team_id], jr.getUserWeight(self._jsonData, grader)))
+                    self.totalWeight += jr.getUserWeight(self._jsonData, grader)
+                    self.numberGrader += 1
 
     def __eq__(self, other):
         res = True

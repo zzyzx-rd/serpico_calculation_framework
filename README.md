@@ -62,7 +62,7 @@ Successfully tagged serpico_calculation_framework_web:latest
 ```
 #### Run the container :
 ```
-$ docker-compsoe up
+$ docker-compose up
 ```
 
 It will display something like : 
@@ -85,6 +85,23 @@ To check your container is running, go on [hello world](http://0.0.0.0:5000/), y
 Hello World! I have been seen x times.
 ```
 (x increment)
+
+
+## Deployment
+sur ta machine
+docker login 
+
+docker build -t docker_account_name/tag .
+
+docker push name.tag
+
+sur le serveur
+docker pull docker_account_name/tag
+docker pull redis
+docker ps -a (affiche les container, utile pour faire du ménage)
+ docker container rm container_id -f (efface container)
+docker run -d -h redis -p 6379 redis 
+ docker run -d -p 5000:5000 gdbdg/serpico_compute_result
 ## Flask help
 ### Launch the app (in dev mode, for local tests)
 Commands to launch the app.

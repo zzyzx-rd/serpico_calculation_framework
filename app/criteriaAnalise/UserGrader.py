@@ -35,6 +35,8 @@ class UserGrader:
         self.team_id = None
         self.weightedStdDev = 0
         self.equalStdDev = 0
+        self.weightedDevRatio = 0
+        self.equalDevRatio = 0
         self.setGrades()
         self.calculStdDev()
         self.setTeamId()
@@ -44,10 +46,12 @@ class UserGrader:
 
         should be called only by the constructor
         """
-        for teamId, teamMember in jr.getTeams(self._jsonData).items():
-            if self.id in teamMember:
-                self.team_id = teamId
-                break
+        self.team_id = None
+        if jr.getTeams(self._jsonData) is not None:
+            for teamId, teamMember in jr.getTeams(self._jsonData).items():
+                if self.id in teamMember:
+                    self.team_id = teamId
+                    break
 
     def setGrades(self):
         """gets the grades self gives in the json
@@ -61,8 +65,10 @@ class UserGrader:
                 self.userGrades[graded] = user_grade
                 self.totalGradedWeight += jr.getUserWeight(self._jsonData, graded)
                 self.nbGraded += 1
+        if self.totalGradedWeight == 0:
+            self.totalGradedWeight += 1
         # team grades
-        if self.id in jr.getTeamGrades(self._jsonData, self.criteriaID).keys():
+        if self.team_id is not None and self.id in jr.getTeamGrades(self._jsonData, self.criteriaID).keys():
             for graded, team_grade in jr.getTeamGrades(self._jsonData, self.criteriaID)[self.id].items():
                 self.teamGrades[graded] = team_grade
                 self.totalGradedWeight += jr.getTeamWeights(self._jsonData)[graded]
@@ -100,5 +106,7 @@ class UserGrader:
         - weightedDevRatio
         - equalDevRatio
         """
-        self.weightedDevRatio = self.weightedStdDev / self.criteria.maxWeightedUserStdDev
-        self.equalDevRatio = self.equalStdDev / self.criteria.maxEqualUserStdDev
+        if self.criteria.maxWeightedUserStdDev:
+            self.weightedDevRatio = self.weightedStdDev / self.criteria.maxWeightedUserStdDev
+        if self.criteria.maxEqualUserStdDev:
+            self.equalDevRatio = self.equalStdDev / self.criteria.maxEqualUserStdDev

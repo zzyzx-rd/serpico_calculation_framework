@@ -56,6 +56,11 @@ class Criteria:
         self.equalUserInertia = 0
         self.weightedTeamInertia = 0
         self.equalTeamInertia = 0
+        # devRatios
+        self.weightedUserDevRatio = 0
+        self.eqalUserDevRatio = 0
+        self.weightedTeamDevRatio = 0
+        self.equalTeamDevRatio = 0
         # Entities (grader and graded)
         self.userGraders = {}
         self.teamGraders = {}
@@ -75,7 +80,6 @@ class Criteria:
         self.calculateIndividualRatios()
         self.setAnswer()
 
-
     def setGradedUsers(self):
         """Instantiates all the gradedUsers
 
@@ -86,16 +90,21 @@ class Criteria:
                 self.GradedUser[user] = gu.GradedUser(user, self._jsonData, self.criteria_id)
                 self.totalGradedWeight += weight
                 self.nbGraded += 1
+        if not self.totalGradedWeight:
+            self.totalGradedWeight = 1
 
     def setGradedTeams(self):
         """Instantiates all the gradedTeams
         build GradedTeams{teamId: GradedTeam}
         """
-        for team, weight in jr.getTeamWeights(self._jsonData).items():
-            if jr.isTeamGraded(self._jsonData, self.criteria_id, team):
-                self.GradedTeam[team] = gt.GradedTeam(team, self._jsonData, self.criteria_id)
-                self.totalGradedTeamWeight += weight
-                self.nbGradedTeams += 1
+        if jr.getTeams(self._jsonData) is None:
+            self.GradedTeam = None
+        else:
+            for team, weight in jr.getTeamWeights(self._jsonData).items():
+                if jr.isTeamGraded(self._jsonData, self.criteria_id, team):
+                    self.GradedTeam[team] = gt.GradedTeam(team, self._jsonData, self.criteria_id)
+                    self.totalGradedTeamWeight += weight
+                    self.nbGradedTeams += 1
 
     def setGraders(self):
         """Instantiates all the graders (user and team)
@@ -106,6 +115,8 @@ class Criteria:
             self.userGraders[graderID] = ug.UserGrader(graderID, self)
             self.totalUserGradersWeight += jr.getUserWeight(self._jsonData, graderID)
             self.nbGraders += 1
+        if self.totalUserGradersWeight == 0:
+            self.totalUserGradersWeight = 1
         # teams (contains a least one grader)
         for grader in self.userGraders.values():
             if (grader.team_id is not None) and (not grader.team_id in self.teamGraders.keys()):
@@ -125,11 +136,12 @@ class Criteria:
             self.averageUsersEqualResult += graded.equalResult
         self.averageUsersWeightedResult /= self.totalGradedWeight
         self.averageUsersEqualResult /= self.nbGraded
-        for team in self.GradedTeam.values():
-            self.averageTeamsWeightedResult += team.weightedResult * team.weight
-            self.averageTeamsEqualResult += team.equalResult
-        self.averageTeamsWeightedResult /= self.totalGradedTeamWeight
-        self.averageTeamsEqualResult /= self.nbGradedTeams
+        if self.nbGradedTeams:
+            for team in self.GradedTeam.values():
+                self.averageTeamsWeightedResult += team.weightedResult * team.weight
+                self.averageTeamsEqualResult += team.equalResult
+            self.averageTeamsWeightedResult /= self.totalGradedTeamWeight
+            self.averageTeamsEqualResult /= self.nbGradedTeams
         # RelativeResults
         self.averageUsersWeightedRelativeResult = (self.averageUsersWeightedResult - self.lowerBound) / (
                 self.upperBound - self.lowerBound)
@@ -149,10 +161,13 @@ class Criteria:
         # inertia
         self.computeInertia()
         # devRatios
-        self.weightedUserDevRatio = self.weightedUserInertia / self.maxWeightedUserStdDev ** 2
-        self.eqalUserDevRatio = self.equalUserInertia / self.maxEqualUserStdDev ** 2
-        self.weightedTeamDevRatio = self.weightedTeamInertia / self.maxWeightedTeamStdDev ** 2
-        self.equalTeamDevRatio = self.equalTeamInertia / self.maxEqualTeamStdDev ** 2
+        if self.maxWeightedUserStdDev:
+            self.weightedUserDevRatio = self.weightedUserInertia / self.maxWeightedUserStdDev ** 2
+        if self.maxEqualUserStdDev:
+            self.eqalUserDevRatio = self.equalUserInertia / self.maxEqualUserStdDev ** 2
+        if self.nbGradersTeam:
+            self.weightedTeamDevRatio = self.weightedTeamInertia / self.maxWeightedTeamStdDev ** 2
+            self.equalTeamDevRatio = self.equalTeamInertia / self.maxEqualTeamStdDev ** 2
 
     def computeStdDev(self):
         """computes the standard deviations values
@@ -167,11 +182,12 @@ class Criteria:
             self.averageEqualUserStdDev += grader.equalStdDev
         self.averageWeightedUserStdDev /= self.totalUserGradersWeight
         self.averageEqualUserStdDev /= self.nbGraders
-        for grader in self.teamGraders.values():
-            self.averageWeightedTeamStdDev += grader.weightedStdDev * jr.getTeamWeights(self._jsonData)[grader.id]
-            self.averageEqualTeamStdDev += grader.equalStdDev
-        self.averageWeightedTeamStdDev /= self.totalTeamsGradersWeight
-        self.averageEqualTeamStdDev /= self.nbGradersTeam
+        if self.nbGradersTeam:
+            for grader in self.teamGraders.values():
+                self.averageWeightedTeamStdDev += grader.weightedStdDev * jr.getTeamWeights(self._jsonData)[grader.id]
+                self.averageEqualTeamStdDev += grader.equalStdDev
+            self.averageWeightedTeamStdDev /= self.totalTeamsGradersWeight
+            self.averageEqualTeamStdDev /= self.nbGradersTeam
 
     def computeMaxStdDev(self):
         """computes the maximalStdDevs (the theoretical maximums)
@@ -200,21 +216,22 @@ class Criteria:
         self.maxEqualUserStdDev /= self.nbGraded
         self.maxEqualUserStdDev = m.sqrt(self.maxEqualUserStdDev)
         # Team
-        for graded in self.GradedTeam.values():
-            if graded.weightedResult < (self.lowerBound + self.upperBound) / 2:
-                self.maxWeightedTeamStdDev += (self.upperBound - graded.weightedResult) ** 2 * \
-                                              jr.getTeamWeights(self._jsonData)[graded.id]
-            else:
-                self.maxWeightedTeamStdDev += (self.lowerBound - graded.weightedResult) ** 2 * \
-                                              jr.getTeamWeights(self._jsonData)[graded.id]
-            if graded.equalResult < (self.lowerBound + self.upperBound) / 2:
-                self.maxEqualTeamStdDev += (self.upperBound - graded.equalResult) ** 2
-            else:
-                self.maxEqualTeamStdDev += (self.lowerBound - graded.equalResult) ** 2
-        self.maxWeightedTeamStdDev /= self.totalGradedTeamWeight
-        self.maxWeightedTeamStdDev = m.sqrt(self.maxWeightedTeamStdDev)
-        self.maxEqualTeamStdDev /= self.nbGradedTeams
-        self.maxEqualTeamStdDev = m.sqrt(self.maxEqualTeamStdDev)
+        if self.nbGradedTeams:
+            for graded in self.GradedTeam.values():
+                if graded.weightedResult < (self.lowerBound + self.upperBound) / 2:
+                    self.maxWeightedTeamStdDev += (self.upperBound - graded.weightedResult) ** 2 * \
+                                                  jr.getTeamWeights(self._jsonData)[graded.id]
+                else:
+                    self.maxWeightedTeamStdDev += (self.lowerBound - graded.weightedResult) ** 2 * \
+                                                  jr.getTeamWeights(self._jsonData)[graded.id]
+                if graded.equalResult < (self.lowerBound + self.upperBound) / 2:
+                    self.maxEqualTeamStdDev += (self.upperBound - graded.equalResult) ** 2
+                else:
+                    self.maxEqualTeamStdDev += (self.lowerBound - graded.equalResult) ** 2
+            self.maxWeightedTeamStdDev /= self.totalGradedTeamWeight
+            self.maxWeightedTeamStdDev = m.sqrt(self.maxWeightedTeamStdDev)
+            self.maxEqualTeamStdDev /= self.nbGradedTeams
+            self.maxEqualTeamStdDev = m.sqrt(self.maxEqualTeamStdDev)
 
     def computeInertia(self):
         """Computes the inertia values
@@ -231,11 +248,12 @@ class Criteria:
         self.weightedUserInertia /= self.totalUserGradersWeight
         self.equalUserInertia /= self.nbGraders
         # Teams
-        for grader in self.teamGraders.values():
-            self.weightedTeamInertia += grader.weightedStdDev ** 2 * jr.getTeamWeights(self._jsonData)[grader.id]
-            self.equalTeamInertia += grader.equalStdDev ** 2
-        self.weightedTeamInertia /= self.totalTeamsGradersWeight
-        self.equalTeamInertia /= self.nbGradersTeam
+        if self.nbGradersTeam:
+            for grader in self.teamGraders.values():
+                self.weightedTeamInertia += grader.weightedStdDev ** 2 * jr.getTeamWeights(self._jsonData)[grader.id]
+                self.equalTeamInertia += grader.equalStdDev ** 2
+            self.weightedTeamInertia /= self.totalTeamsGradersWeight
+            self.equalTeamInertia /= self.nbGradersTeam
 
     def calculateIndividualRatios(self):
         """computes the individual ratios values, for all graders
@@ -252,83 +270,85 @@ class Criteria:
         set the data in self.jsonResponse
         if answerFile is not None, write the json answer in the indicated file
         """
-        result = {"averageUsersWeightedResult": round(self.averageUsersWeightedResult, 2),
-                  "averageUsersEqualResult": round(self.averageUsersEqualResult, 2),
-                  "averageTeamsWeightedResult": round(self.averageTeamsWeightedResult, 2),
-                  "averageTeamsEqualResult": round(self.averageTeamsEqualResult, 2),
-                  # RelativeResult
-                  "averageUsersWeightedRelativeResult": round(self.averageUsersWeightedRelativeResult, 2),
-                  "averageUsersEqualRelativeResult": round(self.averageUsersEqualRelativeResult, 2),
-                  "averageTeamsWeightedRelativeResult": round(self.averageTeamsWeightedRelativeResult, 2),
-                  "averageTeamsEqualRelativeResult": round(self.averageTeamsEqualRelativeResult, 2),
-                  # StdDev
-                  "averageUsersWeightedStdDev": round(self.averageWeightedUserStdDev, 2),
-                  "averageUsersEqualStdDev": round(self.averageEqualUserStdDev, 2),
-                  "averageTeamsWeightedStdDev": round(self.averageWeightedTeamStdDev, 2),
-                  "averageTeamsEqualStdDev": round(self.averageEqualTeamStdDev, 2),
-                  # Max stdDev
-                  "maxUsersWeightedStdDev": round(self.maxWeightedUserStdDev, 2),
-                  "maxUsersEqualStdDev": round(self.maxEqualUserStdDev, 2),
-                  "maxTeamsWeightedStdDev": round(self.maxWeightedTeamStdDev, 2),
-                  "maxTeamsEqualStdDev": round(self.maxEqualTeamStdDev, 2),
-                  # Inertia
-                  "weightedUserInertia": round(self.weightedUserInertia, 2),
-                  "equalUserInertia": round(self.equalUserInertia, 2),
-                  "weightedTeamInertia": round(self.weightedTeamInertia, 2),
-                  "equalTeamInertia": round(self.equalTeamInertia, 2),
-                  # maxInertia
-                  "maxWeightedUserInertia": round(self.maxWeightedUserStdDev ** 2, 2),
-                  "maxEqualUserInertia": round(self.maxEqualUserStdDev ** 2, 2),
-                  "maxWeightedTeamInertia": round(self.maxWeightedTeamStdDev ** 2, 2),
-                  "maxEqualTeamInertia": round(self.maxEqualTeamStdDev ** 2, 2),
-                  # dev Ratio
-                  "weightedUserDevRatio": round(self.weightedUserDevRatio, 2),
-                  "equalUserDevRatio": round(self.eqalUserDevRatio, 2),
-                  "weightedTeamDevRatio": round(self.weightedTeamDevRatio, 2),
-                  "equalTeamDevRatio": round(self.equalTeamDevRatio, 2),
-                  "user": {},
-                  "team": {}}
+        self.result = {
+            "averageUsersWeightedResult": round(self.averageUsersWeightedResult, 2),
+            "averageUsersEqualResult": round(self.averageUsersEqualResult, 2),
+            "averageTeamsWeightedResult": round(self.averageTeamsWeightedResult, 2),
+            "averageTeamsEqualResult": round(self.averageTeamsEqualResult, 2),
+            # RelativeResult
+            "averageUsersWeightedRelativeResult": round(self.averageUsersWeightedRelativeResult, 2),
+            "averageUsersEqualRelativeResult": round(self.averageUsersEqualRelativeResult, 2),
+            "averageTeamsWeightedRelativeResult": round(self.averageTeamsWeightedRelativeResult, 2),
+            "averageTeamsEqualRelativeResult": round(self.averageTeamsEqualRelativeResult, 2),
+            # StdDev
+            "averageUsersWeightedStdDev": round(self.averageWeightedUserStdDev, 2),
+            "averageUsersEqualStdDev": round(self.averageEqualUserStdDev, 2),
+            "averageTeamsWeightedStdDev": round(self.averageWeightedTeamStdDev, 2),
+            "averageTeamsEqualStdDev": round(self.averageEqualTeamStdDev, 2),
+            # Max stdDev
+            "maxUsersWeightedStdDev": round(self.maxWeightedUserStdDev, 2),
+            "maxUsersEqualStdDev": round(self.maxEqualUserStdDev, 2),
+            "maxTeamsWeightedStdDev": round(self.maxWeightedTeamStdDev, 2),
+            "maxTeamsEqualStdDev": round(self.maxEqualTeamStdDev, 2),
+            # Inertia
+            "weightedUserInertia": round(self.weightedUserInertia, 2),
+            "equalUserInertia": round(self.equalUserInertia, 2),
+            "weightedTeamInertia": round(self.weightedTeamInertia, 2),
+            "equalTeamInertia": round(self.equalTeamInertia, 2),
+            # maxInertia
+            "maxWeightedUserInertia": round(self.maxWeightedUserStdDev ** 2, 2),
+            "maxEqualUserInertia": round(self.maxEqualUserStdDev ** 2, 2),
+            "maxWeightedTeamInertia": round(self.maxWeightedTeamStdDev ** 2, 2),
+            "maxEqualTeamInertia": round(self.maxEqualTeamStdDev ** 2, 2),
+            # dev Ratio
+            "weightedUserDevRatio": round(self.weightedUserDevRatio, 2),
+            "equalUserDevRatio": round(self.eqalUserDevRatio, 2),
+            "weightedTeamDevRatio": round(self.weightedTeamDevRatio, 2),
+            "equalTeamDevRatio": round(self.equalTeamDevRatio, 2),
+            "user": {},
+            "team": {}}
         # UserResult
         for user_id, userData in self.GradedUser.items():
-            result["user"][user_id] = {}
-            result["user"][user_id]["weightedResult"] = round(userData.weightedResult, 2)
-            result["user"][user_id]["equalResult"] = round(userData.equalResult, 2)
-            result["user"][user_id]["weightedRelativeResult"] = round(
+            self.result["user"][user_id] = {}
+            self.result["user"][user_id]["weightedResult"] = round(userData.weightedResult, 2)
+            self.result["user"][user_id]["equalResult"] = round(userData.equalResult, 2)
+            self.result["user"][user_id]["weightedRelativeResult"] = round(
                 (userData.weightedResult - self.lowerBound) / (self.upperBound - self.lowerBound), 2)
-            result["user"][user_id]["equalRelativeResult"] = round(
+            self.result["user"][user_id]["equalRelativeResult"] = round(
                 (userData.equalResult - self.lowerBound) / (self.upperBound - self.lowerBound), 2)
         # TeamResult
-        for team_id, teamData in self.GradedTeam.items():
-            result["team"][team_id] = {}
-            result["team"][team_id]["weightedResult"] = round(teamData.weightedResult, 2)
-            result["team"][team_id]["equalResult"] = round(teamData.equalResult, 2)
-            result["team"][team_id]["weightedRelativeResult"] = round(
-                (teamData.weightedResult - self.lowerBound) / (self.upperBound - self.lowerBound), 2)
-            result["team"][team_id]["equalRelativeResult"] = round(
-                (teamData.equalResult - self.lowerBound) / (self.upperBound - self.lowerBound), 2)
+        if self.nbGradedTeams:
+            for team_id, teamData in self.GradedTeam.items():
+                self.result["team"][team_id] = {}
+                self.result["team"][team_id]["weightedResult"] = round(teamData.weightedResult, 2)
+                self.result["team"][team_id]["equalResult"] = round(teamData.equalResult, 2)
+                self.result["team"][team_id]["weightedRelativeResult"] = round(
+                    (teamData.weightedResult - self.lowerBound) / (self.upperBound - self.lowerBound), 2)
+                self.result["team"][team_id]["equalRelativeResult"] = round(
+                    (teamData.equalResult - self.lowerBound) / (self.upperBound - self.lowerBound), 2)
 
         # user deviations
         for user_id, userData in self.userGraders.items():
-            if not user_id in result["user"].keys():
-                result["user"][user_id] = {}
+            if not user_id in self.result["user"].keys():
+                self.result["user"][user_id] = {}
             # StdDev
-            result["user"][user_id]["weightedStdDev"] = round(userData.weightedStdDev, 2)
-            result["user"][user_id]["equalStdDev"] = round(userData.equalStdDev, 2)
+            self.result["user"][user_id]["weightedStdDev"] = round(userData.weightedStdDev, 2)
+            self.result["user"][user_id]["equalStdDev"] = round(userData.equalStdDev, 2)
             # Ratios
-            result['user'][user_id]["weightedDevRatio"] = round(userData.weightedDevRatio, 2)
-            result['user'][user_id]["equalDevRatio"] = round(userData.equalDevRatio, 2)
+            self.result['user'][user_id]["weightedDevRatio"] = round(userData.weightedDevRatio, 2)
+            self.result['user'][user_id]["equalDevRatio"] = round(userData.equalDevRatio, 2)
         # teams deviation
         for team_id, teamData in self.teamGraders.items():
-            if not team_id in result["team"].keys():
-                result["team"][team_id] = {}
+            if not team_id in self.result["team"].keys():
+                self.result["team"][team_id] = {}
             # stdDev
-            result["team"][team_id]["weightedStdDev"] = round(teamData.weightedStdDev, 2)
-            result["team"][team_id]["equalStdDev"] = round(teamData.equalStdDev, 2)
+            self.result["team"][team_id]["weightedStdDev"] = round(teamData.weightedStdDev, 2)
+            self.result["team"][team_id]["equalStdDev"] = round(teamData.equalStdDev, 2)
             # ratios
-            result['team'][team_id]["weightedDevRatio"] = round(teamData.weightedDevRatio, 2)
-            result['team'][team_id]["equalDevRatio"] = round(teamData.equalDevRatio, 2)
-        self.jsonResponse = json.dumps(result, ensure_ascii=False, indent=4)
+            self.result['team'][team_id]["weightedDevRatio"] = round(teamData.weightedDevRatio, 2)
+            self.result['team'][team_id]["equalDevRatio"] = round(teamData.equalDevRatio, 2)
+        self.jsonResponse = json.dumps(self.result, ensure_ascii=False, indent=4)
         # Write the json in a file (for tests only)
         if not answerFile is None:
             with open(answerFile, 'w', encoding='utf-8') as f:
-                json.dump(result, f, ensure_ascii=False, indent=4)
+                json.dump(self.result, f, ensure_ascii=False, indent=4)

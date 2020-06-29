@@ -86,6 +86,9 @@ def getTeamGrades(jsonData, criteriaId):
     """
     return jsonData["criterias"][criteriaId]["teamGrades"]
 
+def getStageId(jsonData):
+    return jsonData["stageId"]
+
 
 def isUserGraded(jsonData, criteriaId, userId):
     """boolean, weather the user is graded(an active or a passive

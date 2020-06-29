@@ -67,10 +67,13 @@ def averageGlobal(jsonData, key):
     # Loop on the elements (criteria or stage)
     for element_key, element in jsonData.items():
         # if the element is not the dictionary with the user or team's data
-        if not element_key in ENTITY_TYPES:
+        if (not element_key in ENTITY_TYPES) and element_key != "stageId":
             average += element[key] * element["weight"]
             sumWeight += element["weight"]
-    return average / sumWeight
+    if sumWeight:
+        return average / sumWeight
+    else:
+        return 0
 
 
 def averageIndividual(jsonData, entityType, entity_key, key):
@@ -88,9 +91,10 @@ def averageIndividual(jsonData, entityType, entity_key, key):
     # loop on the elements (criteria or stage)
     for element_key, element in jsonData.items():
         # if the element is not the dictionary with the user or team's data
-        if not element_key in ENTITY_TYPES:
+        if (not element_key in ENTITY_TYPES) and element_key != "stageId":
             # if the entity has the value for this step
-            if entity_key in element[entityType].keys() and key in element[entityType][entity_key].keys():
+            if entity_key in element[entityType].keys() and key in element[entityType][entity_key].keys() and \
+                    element[entityType][entity_key][key] is not None:
                 average += element[entityType][entity_key][key] * element["weight"]
                 sumWeight += element["weight"]
                 defined = True

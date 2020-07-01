@@ -3,6 +3,7 @@ import os
 from flask import Flask
 import redis
 import time
+import sys
 
 
 def create_app(test_config=None):
@@ -43,7 +44,9 @@ def create_app(test_config=None):
     @app.route('/')
     def hello():
         count = get_hit_count()
-        return 'Hello World! I have been seen {} times.\n'.format(count)
+        print("Appel de hello : ", file=sys.stdout)
+        return "Welcome on the first version of the framework of result calculation, powered by Serpico I have been " \
+               "seen {} times.\n".format(count)
 
     # Import the function in the main function
     from app import main

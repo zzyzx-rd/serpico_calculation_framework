@@ -6,7 +6,4 @@ RUN apk add --no-cache gcc musl-dev linux-headers
 COPY requirements.txt requirements.txt
 RUN pip install -r requirements.txt
 COPY . .
-#CMD gunicorn "app:create_app()"
 CMD ["gunicorn", "--bind", "0.0.0.0:5000", "app:create_app()"]
-#CMD ["flask", "run"]
-#163.172.153.245

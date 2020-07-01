@@ -21,6 +21,7 @@ def postJsonCriteria():
     @warning doesn't check if the json has the right structure
     @return: a json, with all calculated values
     """
+    print("request json : ", request.get_json(), file=sys.stdout)
     print("request json : ", request.get_json(), file=sys.stderr)
     # check the request has the correct format
     if not request.is_json:
@@ -67,4 +68,5 @@ def postJsonStep():
 
 @bp.route('/hello', methods=['GET', 'POST'])
 def hello_world():
-    return "Hello World ! You test the flask version '" + "'"
+    print("Appel de hello : ", file=sys.stdout)
+    return "Welcome on the first version of the framework of result calculation, powered by Serpico"

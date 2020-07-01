@@ -3,30 +3,30 @@ per-stage results computation module
 
 Python | Flask | Gunicorn | Docker
 
-## Creating the virtual environement
-If you want to test it without launcing with docker, you must install the virtual environement, with doing following : 
-Create a `venv` folder
+## Create the virtual environement
+If you want to test it without launching with docker, you must install the virtual environment, with doing following : 
+* Create a `venv` folder
 
-```
- $ python3.7 -m venv venv
-```
-Activate the environment (it should be shown in your shell if you use zsh for example)
+    > python3.7 -m venv venv
 
-    $ . venv/bin/activate
+* Activate the environment (it should be shown in your shell if you use zsh for example)
 
-Install all the requirements in the virtual env.
-```
-$ pip install -r requirements.txt
-```
+    > . venv/bin/activate
+
+
+* Install all the requirements in the virtual env.
+
+    > pip install -r requirements.txt
+
 ## Deployement
 This app is deployed with  [docker](https://docs.docker.com/) and docker-compose
 ### Local deployment
 To deploy localy, go in the root of the project.
 #### Build the container
 The container must  be rebuilt after modifications in the sources files. To rebuild the container image, do : 
-```
-$ docker-compose build
-```
+
+> docker-compose build
+
 It will take some times (one or two minutes), and should dipslay someting like : 
 ```
 redis uses an image, skipping
@@ -61,9 +61,9 @@ Successfully built 69d4d7d0c604
 Successfully tagged serpico_calculation_framework_web:latest
 ```
 #### Run the container :
-```
-$ docker-compose up
-```
+
+> docker-compose up
+
 
 It will display something like : 
 ```
@@ -87,22 +87,32 @@ Hello World! I have been seen x times.
 (x increment)
 
 
-## Deployment
-sur ta machine
-docker login 
+## Deployment sur le serveur
+Sur le serveur ```serpico```, aller dans ```/var/www/serpico_calculation_framework```.
+* Pour mettre le code à jour, il suffit de pull.
+* Pour vérifier les containers présents sur le serveur (et faire du ménage si besoins): 
+    > docker ps -a 
 
-docker build -t docker_account_name/tag .
+Cà devrait afficher quelquechose comme: 
+```
+CONTAINER ID        IMAGE                             COMMAND                  CREATED             STATUS                          PORTS               NAMES
+5e077a11f79d        serpicocalculationframework_web   "gunicorn --bind 0.0…"   2 minutes ago       Exited (0) About a minute ago   
+```
+* Pour supprimer des containers inutiles (ou shut down des containers en  cours), faire : 
+    > docker container rm *container_id* -f 
 
-docker push name.tag
+Remarque : il est possible de mettre autant d'ID de container que souhaité.
+* Pour lancer le service, il suffit de faire comme sur votre machine personnelle, soit :
+    >docker-compose build                                                                               
+    >docker-compose up
 
-sur le serveur
-docker pull docker_account_name/tag
-docker pull redis
-docker ps -a (affiche les container, utile pour faire du ménage)
- docker container rm container_id -f (efface container)
-docker run -d -h redis -p 6379 redis 
- docker run -d -p 5000:5000 gdbdg/serpico_compute_result
-## Flask help
+* Enfin, pour appeler ce service, il faut utiliser l'une des 3 url suivantes : 
+    * http://51.15.121.241:5000/ : page du hello world, utile pour tester la disponibilité du serice sans passer par Serpico
+    * http://51.15.121.241:5000/main/criteriaComputation : url de computation des criterias
+    * http://51.15.121.241:5000/main/stageComputation : url de computation des stages ou activity. 
+
+## Flask help (deprecated)
+This section is useless now, run the docker container, it's better.
 ### Launch the app (in dev mode, for local tests)
 Commands to launch the app.
 ```
@@ -120,4 +130,20 @@ It should display something like
  * Debugger is active!
  * Debugger PIN: 295-924-858
 ```
+
+# brouillon
+sur ta machine
+docker login 
+
+docker build -t docker_account_name/tag .
+
+docker push name.tag
+
+sur le serveur
+docker pull docker_account_name/tag
+docker pull redis
+docker ps -a (affiche les container, utile pour faire du ménage)
+ docker container rm container_id -f (efface container)
+docker run -d -h redis -p 6379 redis 
+ docker run -d -p 5000:5000 gdbdg/serpico_compute_result
 

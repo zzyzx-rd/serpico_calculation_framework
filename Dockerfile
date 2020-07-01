@@ -7,4 +7,6 @@ COPY requirements.txt requirements.txt
 RUN pip install -r requirements.txt
 COPY . .
 #CMD gunicorn "app:create_app()"
-CMD ["flask", "run"]
+CMD ["gunicorn", "--bind", ":5000", "app:create_app()"]
+#CMD ["flask", "run"]
+#163.172.153.245

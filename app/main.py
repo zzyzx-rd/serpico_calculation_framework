@@ -42,6 +42,7 @@ def postJsonCriteria():
         criteria = cr.Criteria(content, criteriaId)
         result[criteria.criteria_id] = criteria.result
     print("result : ", strResult, file=sys.stderr)
+    sys.stderr.flush()
     return json.dumps(result, indent=True)
 
 
@@ -63,6 +64,7 @@ def postJsonStep():
     # compute the results
     result = s.computeResult(content)
     print("stepResult : ", result, file=sys.stderr)
+    sys.stderr.flush()
     return result
 
 

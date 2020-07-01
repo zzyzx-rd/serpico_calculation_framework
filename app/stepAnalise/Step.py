@@ -67,7 +67,7 @@ def averageGlobal(jsonData, key):
     # Loop on the elements (criteria or stage)
     for element_key, element in jsonData.items():
         # if the element is not the dictionary with the user or team's data
-        if (not element_key in ENTITY_TYPES) and element_key != "stageId" and element is not None:
+        if (not element_key in ENTITY_TYPES) and element_key != "stageId" and element[key] is not None:
             average += element[key] * element["weight"]
             sumWeight += element["weight"]
     if sumWeight:

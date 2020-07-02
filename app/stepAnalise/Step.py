@@ -73,7 +73,7 @@ def averageGlobal(jsonData, key):
     if sumWeight:
         return average / sumWeight
     else:
-        return 0
+        return None
 
 
 def averageIndividual(jsonData, entityType, entity_key, key):
@@ -114,7 +114,9 @@ def computeResult(jsonData, answerFile=None):
     result = {}
     # compute the global parameters
     for key in GLOBAL_KEYS:
-        result[key] = round(averageGlobal(jsonData, key), 2)
+        result[key] = averageGlobal(jsonData, key)
+        if result[key] is not None:
+            result[key] = round(result[key], 2)
     # compute the individual Parameters
     # loop on user/team type of entities
     for entity_type in ENTITY_TYPES:

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>Python</ID>
+  <OriginalElement>#/Users/guillaume/Dropbox/Stage/Stage 2A/serpico_calculation_framework/app/criteriaAnalise</OriginalElement>
+  <nodes>
+    <node x="1282.0" y="1075.0">app.criteriaAnalise.UserGrader.UserGrader</node>
+    <node x="554.0" y="1108.0">app.criteriaAnalise.TeamGrader.TeamGrader</node>
+    <node x="206.0" y="1086.0">app.criteriaAnalise.Gradable.Gradable</node>
+    <node x="840.0" y="0.0">typing.Hashable</node>
+    <node x="0.0" y="1958.0">app.criteriaAnalise.GradedUser.GradedUser</node>
+    <node x="934.0" y="690.0">app.criteriaAnalise.Criteria.Criteria</node>
+    <node x="781.5" y="104.0">object</node>
+    <node x="380.0" y="1980.0">app.criteriaAnalise.GradedTeam.GradedTeam</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="app.criteriaAnalise.UserGrader.UserGrader" target="object">
+      <point x="0.0" y="-224.0" />
+      <point x="1462.0" y="660.0" />
+      <point x="1016.875" y="660.0" />
+      <point x="100.875" y="268.0" />
+    </edge>
+    <edge source="app.criteriaAnalise.GradedUser.GradedUser" target="app.criteriaAnalise.Gradable.Gradable">
+      <point x="0.0" y="-114.0" />
+      <point x="180.0" y="1933.0" />
+      <point x="288.0" y="1933.0" />
+      <point x="-82.0" y="213.0" />
+    </edge>
+    <edge source="app.criteriaAnalise.TeamGrader.TeamGrader" target="object">
+      <point x="0.0" y="-191.0" />
+      <point x="734.0" y="670.0" />
+      <point x="882.375" y="670.0" />
+      <point x="-33.625" y="268.0" />
+    </edge>
+    <edge source="app.criteriaAnalise.GradedTeam.GradedTeam" target="app.criteriaAnalise.Gradable.Gradable">
+      <point x="0.0" y="-92.0" />
+      <point x="560.0" y="1933.0" />
+      <point x="452.0" y="1933.0" />
+      <point x="82.0" y="213.0" />
+    </edge>
+    <edge source="app.criteriaAnalise.Criteria.Criteria" target="object">
+      <point x="0.0" y="-609.0" />
+      <point x="1098.0" y="670.0" />
+      <point x="949.625" y="670.0" />
+      <point x="33.625" y="268.0" />
+    </edge>
+    <edge source="object" target="typing.Hashable">
+      <point x="0.0" y="-268.0" />
+      <point x="0.0" y="27.0" />
+    </edge>
+    <edge source="app.criteriaAnalise.Gradable.Gradable" target="object">
+      <point x="0.0" y="-213.0" />
+      <point x="370.0" y="660.0" />
+      <point x="815.125" y="660.0" />
+      <point x="-100.875" y="268.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.43336355394378967" x="821.0" y="1093.0" />
+  <SelectedNodes>
+    <node>object</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Methods</Category>
+    <Category>Inner Classes</Category>
+    <Category>Fields</Category>
+  </Categories>
+</Diagram>
+

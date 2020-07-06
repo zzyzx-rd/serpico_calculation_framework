@@ -1,0 +1,11 @@
+\BOOKMARK [1][-]{section.1}{Les r\351sulats calcul\351s}{}% 1
+\BOOKMARK [2][-]{subsection.1.1}{Traitement de la jockerisation}{section.1}% 2
+\BOOKMARK [1][-]{section.2}{Les param\350tres en entr\351e}{}% 3
+\BOOKMARK [2][-]{subsection.2.1}{Pour les crit\350res}{section.2}% 4
+\BOOKMARK [2][-]{subsection.2.2}{Poue les phases et activit\351s}{section.2}% 5
+\BOOKMARK [1][-]{section.3}{Les donn\351es en sortie}{}% 6
+\BOOKMARK [1][-]{section.4}{architecture de l'appli}{}% 7
+\BOOKMARK [2][-]{subsection.4.1}{Le module de calcul par crit\350re}{section.4}% 8
+\BOOKMARK [2][-]{subsection.4.2}{Le module de calcul par phase ou activit\351}{section.4}% 9
+\BOOKMARK [1][-]{section.5}{Remarques li\351es \340 l'utilisation par l'appli Serpico}{}% 10
+\BOOKMARK [1][-]{section.6}{Mise en prod et utilisation}{}% 11

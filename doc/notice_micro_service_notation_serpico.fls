@@ -1,0 +1,509 @@
+PWD /Users/guillaume/Dropbox/Stage/Stage 2A/serpico_calculation_framework/doc
+INPUT /usr/local/texlive/2018/texmf.cnf
+INPUT /usr/local/texlive/2018/texmf-dist/web2c/texmf.cnf
+INPUT /usr/local/texlive/2018/texmf-var/web2c/pdftex/pdflatex.fmt
+INPUT /Users/guillaume/Dropbox/Stage/Stage 2A/serpico_calculation_framework/doc/notice_micro_service_notation_serpico.tex
+OUTPUT /Users/guillaume/Dropbox/Stage/Stage 2A/serpico_calculation_framework/doc/notice_micro_service_notation_serpico.log
+INPUT /Users/guillaume/Library/texmf/tex/template.cls
+INPUT /Users/guillaume/Library/texmf/tex/template.cls
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/base/article.cls
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/base/article.cls
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/base/size11.clo
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/base/size11.clo
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/map/fontname/texfonts.map
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
+INPUT /Users/guillaume/Library/texmf/tex/packages.tex
+INPUT /Users/guillaume/Library/texmf/tex/packages.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/babel/babel.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/babel/babel.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/babel/switch.def
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/babel-french/french.ldf
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/babel-french/french.ldf
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/babel/babel.def
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/babel/txtbabel.def
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/carlisle/scalefnt.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/carlisle/scalefnt.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/graphics/keyval.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/graphics/keyval.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/base/inputenc.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/base/inputenc.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/base/fontenc.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/base/fontenc.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/base/t1enc.def
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/base/t1enc.def
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/jknappen/ec/ecrm1095.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/amssymb.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/amssymb.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsmath.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsmath.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amstext.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amstext.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsgen.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsgen.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsbsy.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsbsy.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsopn.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsopn.sty
+INPUT /Users/guillaume/Library/texmf/tex/header.sty
+INPUT /Users/guillaume/Library/texmf/tex/header.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/base/ifthen.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/base/ifthen.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/xstring/xstring.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/xstring/xstring.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/xstring/xstring.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/xargs/xargs.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/xargs/xargs.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+INPUT /Users/guillaume/Library/texmf/tex/utilitaire.sty
+INPUT /Users/guillaume/Library/texmf/tex/utilitaire.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/lastpage/lastpage.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/lastpage/lastpage.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/tools/layout.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/tools/layout.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/geometry/geometry.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/geometry/geometry.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/setspace/setspace.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/setspace/setspace.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/tools/xspace.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/tools/xspace.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/titlesec/titlesec.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/titlesec/titlesec.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/ulem/ulem.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/ulem/ulem.sty
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/latex-fonts/lasy6.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/lipsum/lipsum.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/lipsum/lipsum.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/tocloft/tocloft.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/tocloft/tocloft.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/fancybox/fancybox.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/fancybox/fancybox.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/xcolor/xcolor.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/xcolor/xcolor.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/graphics-cfg/color.cfg
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/graphics-cfg/color.cfg
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/graphics-def/pdftex.def
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/graphics-def/pdftex.def
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/graphics/dvipsnam.def
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/graphics/dvipsnam.def
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/xcolor/svgnam.def
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/xcolor/svgnam.def
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/colortbl/colortbl.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/colortbl/colortbl.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/tools/array.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/tools/array.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/graphics/graphicx.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/graphics/graphicx.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/graphics/graphics.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/graphics/graphics.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/graphics/trig.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/graphics/trig.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/listings/listings.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/listings/listings.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/listings/lstmisc.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/listings/lstmisc.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/listings/listings.cfg
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/listings/listings.cfg
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/listingsutf8.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/listingsutf8.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/stringenc.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/stringenc.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/pdfescape.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/pdfescape.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/tkz-tab/tkz-tab.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/tkz-tab/tkz-tab.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/etex-pkg/etex.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/etex-pkg/etex.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-lists.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/ms/everyshi.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/ms/everyshi.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryarrows.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryarrows.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarypatterns.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarypatterns.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/libraries/pgflibrarypatterns.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/libraries/pgflibrarypatterns.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/multirow/multirow.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/multirow/multirow.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/tools/multicol.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/tools/multicol.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/tools/hhline.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/tools/hhline.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/arydshln/arydshln.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/arydshln/arydshln.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/blkarray/blkarray.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/blkarray/blkarray.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/amscls/amsthm.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/amscls/amsthm.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/systeme/systeme.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/systeme/systeme.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/systeme/systeme.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/stmaryrd/stmaryrd.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/stmaryrd/stmaryrd.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/tools/verbatim.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/tools/verbatim.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/verbatimbox/verbatimbox.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/verbatimbox/verbatimbox.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/readarray/readarray.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/readarray/readarray.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/listofitems/listofitems.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/listofitems/listofitems.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/listofitems/listofitems.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/caption/subcaption.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/caption/subcaption.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/caption/caption.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/caption/caption.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/caption/caption3.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/caption/caption3.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/float/float.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/float/float.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/pgfplots/pgfplots.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/pgfplots/pgfplots.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgfplots/pgfplots.revision.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgfplots/pgfplots.revision.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-luatex.def
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgfplots/pgfplotscore.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgfplots/sys/pgfplotssysgeneric.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgfplots/libs/pgfplotslibrary.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_loader.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_pgflibraryfpu.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_pgfmathfloat.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_leq.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsliststructure.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsliststructureext.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsarray.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsmatrix.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstableshared.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsdeque.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.data.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.verb.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgfplots/libs/pgflibrarypgfplots.surfshading.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots.surfshading.pgfsys-pdftex.def
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots.surfshading.pgfsys-pdftex.def
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgfplots/util/pgfplotscolormap.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgfplots/util/pgfplotscolor.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgfplots/pgfplotsstackedplots.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgfplots/pgfplotsplothandlers.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplothandler.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplotimage.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgfplots/pgfplots.scaling.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgfplots/pgfplotscoordprocessing.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgfplots/pgfplots.errorbars.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgfplots/pgfplots.markers.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgfplots/pgfplotsticks.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgfplots/pgfplots.paths.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.pathmorphing.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.pathmorphing.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.pathmorphing.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.pathmorphing.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.pathreplacing.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.pathreplacing.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.pathreplacing.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.pathreplacing.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryplotmarks.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryplotmarks.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/libraries/pgflibraryplotmarks.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/libraries/pgflibraryplotmarks.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryautomata.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryautomata.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.multipart.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.multipart.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.multipart.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.multipart.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarypositioning.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarypositioning.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarymatrix.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarymatrix.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarycalc.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarycalc.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryfit.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryfit.code.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/eurosym/eurosym.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/eurosym/eurosym.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/hyperref/hyperref.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/hyperref/hyperref.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/auxhook.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/auxhook.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/hyperref/pd1enc.def
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/hyperref/pd1enc.def
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/latexconfig/hyperref.cfg
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/latexconfig/hyperref.cfg
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/url/url.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/url/url.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/hyperref/hpdftex.def
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/hyperref/hpdftex.def
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
+INPUT /Users/guillaume/Library/texmf/tex/parametres.tex
+INPUT /Users/guillaume/Library/texmf/tex/parametres.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/listings/lstlang1.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/listings/lstlang1.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/listings/lstmisc.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/listings/lstmisc.sty
+INPUT /Users/guillaume/Library/texmf/tex/section.tex
+INPUT /Users/guillaume/Library/texmf/tex/section.tex
+INPUT /Users/guillaume/Dropbox/Stage/Stage 2A/serpico_calculation_framework/doc/notice_micro_service_notation_serpico.aux
+INPUT /Users/guillaume/Dropbox/Stage/Stage 2A/serpico_calculation_framework/doc/notice_micro_service_notation_serpico.aux
+INPUT /Users/guillaume/Dropbox/Stage/Stage 2A/serpico_calculation_framework/doc/resultats_critere.aux
+INPUT /Users/guillaume/Dropbox/Stage/Stage 2A/serpico_calculation_framework/doc/resultats_critere.aux
+INPUT /Users/guillaume/Dropbox/Stage/Stage 2A/serpico_calculation_framework/doc/resultats_phase_activity.aux
+INPUT /Users/guillaume/Dropbox/Stage/Stage 2A/serpico_calculation_framework/doc/resultats_phase_activity.aux
+OUTPUT /Users/guillaume/Dropbox/Stage/Stage 2A/serpico_calculation_framework/doc/notice_micro_service_notation_serpico.aux
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/tools/hhline.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/tools/hhline.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+INPUT /usr/local/texlive/2018/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/grfext.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/grfext.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/hyperref/nameref.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/hyperref/nameref.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
+INPUT /Users/guillaume/Dropbox/Stage/Stage 2A/serpico_calculation_framework/doc/notice_micro_service_notation_serpico.out
+INPUT /Users/guillaume/Dropbox/Stage/Stage 2A/serpico_calculation_framework/doc/notice_micro_service_notation_serpico.out
+INPUT /Users/guillaume/Dropbox/Stage/Stage 2A/serpico_calculation_framework/doc/notice_micro_service_notation_serpico.out
+INPUT /Users/guillaume/Dropbox/Stage/Stage 2A/serpico_calculation_framework/doc/notice_micro_service_notation_serpico.out
+OUTPUT /Users/guillaume/Dropbox/Stage/Stage 2A/serpico_calculation_framework/doc/notice_micro_service_notation_serpico.pdf
+INPUT /Users/guillaume/Dropbox/Stage/Stage 2A/serpico_calculation_framework/doc/notice_micro_service_notation_serpico.out
+INPUT /Users/guillaume/Dropbox/Stage/Stage 2A/serpico_calculation_framework/doc/notice_micro_service_notation_serpico.out
+OUTPUT /Users/guillaume/Dropbox/Stage/Stage 2A/serpico_calculation_framework/doc/notice_micro_service_notation_serpico.out
+INPUT /Users/guillaume/Dropbox/Stage/Stage 2A/serpico_calculation_framework/doc/serpico.png
+INPUT /Users/guillaume/Dropbox/Stage/Stage 2A/serpico_calculation_framework/doc/serpico.png
+INPUT /Users/guillaume/Dropbox/Stage/Stage 2A/serpico_calculation_framework/doc/serpico.png
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/jknappen/ec/ecrm1200.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/jknappen/ec/ecrm2074.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/jknappen/ec/ecbx2074.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/jknappen/ec/ecrm1440.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/jknappen/ec/ecbx1440.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/jknappen/ec/eccc1200.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmmi8.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmmi6.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsa.fd
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsa.fd
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsb.fd
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsb.fd
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/stmaryrd/Ustmry.fd
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/stmaryrd/Ustmry.fd
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/stmaryrd/stmary10.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/stmaryrd/stmary8.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/stmaryrd/stmary6.tfm
+INPUT /usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map
+INPUT /Users/guillaume/Dropbox/Stage/Stage 2A/serpico_calculation_framework/doc/notice_micro_service_notation_serpico.toc
+INPUT /Users/guillaume/Dropbox/Stage/Stage 2A/serpico_calculation_framework/doc/notice_micro_service_notation_serpico.toc
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/jknappen/ec/ecbx1095.tfm
+OUTPUT /Users/guillaume/Dropbox/Stage/Stage 2A/serpico_calculation_framework/doc/notice_micro_service_notation_serpico.toc
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/jknappen/ec/ecxc1440.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/stmaryrd/stmary10.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/stmaryrd/stmary10.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/stmaryrd/stmary7.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/jknappen/ec/ecbx1200.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/stmaryrd/stmary10.tfm
+INPUT /Users/guillaume/Dropbox/Stage/Stage 2A/serpico_calculation_framework/doc/serpico.png
+INPUT /Users/guillaume/Dropbox/Stage/Stage 2A/serpico_calculation_framework/doc/serpico.png
+OUTPUT /Users/guillaume/Dropbox/Stage/Stage 2A/serpico_calculation_framework/doc/resultats_critere.aux
+OUTPUT /Users/guillaume/Dropbox/Stage/Stage 2A/serpico_calculation_framework/doc/resultats_phase_activity.aux
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/jknappen/ec/ecrm0900.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/base/t1cmtt.fd
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/base/t1cmtt.fd
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/jknappen/ec/ectt0900.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/jknappen/ec/ecit0900.tfm
+INPUT /Users/guillaume/Dropbox/Stage/Stage 2A/serpico_calculation_framework/doc/serpico.png
+INPUT /Users/guillaume/Dropbox/Stage/Stage 2A/serpico_calculation_framework/doc/serpico.png
+INPUT /Users/guillaume/Dropbox/Stage/Stage 2A/serpico_calculation_framework/doc/serpico.png
+INPUT /Users/guillaume/Dropbox/Stage/Stage 2A/serpico_calculation_framework/doc/serpico.png
+INPUT /Users/guillaume/Dropbox/Stage/Stage 2A/serpico_calculation_framework/doc/serpico.png
+INPUT /Users/guillaume/Dropbox/Stage/Stage 2A/serpico_calculation_framework/doc/serpico.png
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/jknappen/ec/ectt1095.tfm
+INPUT /Users/guillaume/Dropbox/Stage/Stage 2A/serpico_calculation_framework/doc/criteriaAnalise.png
+INPUT /Users/guillaume/Dropbox/Stage/Stage 2A/serpico_calculation_framework/doc/criteriaAnalise.png
+INPUT /Users/guillaume/Dropbox/Stage/Stage 2A/serpico_calculation_framework/doc/criteriaAnalise.png
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/jknappen/ec/eccc1095.tfm
+INPUT /Users/guillaume/Dropbox/Stage/Stage 2A/serpico_calculation_framework/doc/serpico.png
+INPUT /Users/guillaume/Dropbox/Stage/Stage 2A/serpico_calculation_framework/doc/serpico.png
+INPUT /Users/guillaume/Dropbox/Stage/Stage 2A/serpico_calculation_framework/doc/serpico.png
+INPUT /Users/guillaume/Dropbox/Stage/Stage 2A/serpico_calculation_framework/doc/serpico.png
+INPUT /Users/guillaume/Dropbox/Stage/Stage 2A/serpico_calculation_framework/doc/serpico.png
+INPUT /Users/guillaume/Dropbox/Stage/Stage 2A/serpico_calculation_framework/doc/serpico.png
+INPUT /Users/guillaume/Dropbox/Stage/Stage 2A/serpico_calculation_framework/doc/notice_micro_service_notation_serpico.aux
+INPUT /Users/guillaume/Dropbox/Stage/Stage 2A/serpico_calculation_framework/doc/resultats_critere.aux
+INPUT /Users/guillaume/Dropbox/Stage/Stage 2A/serpico_calculation_framework/doc/resultats_critere.aux
+INPUT /Users/guillaume/Dropbox/Stage/Stage 2A/serpico_calculation_framework/doc/resultats_phase_activity.aux
+INPUT /Users/guillaume/Dropbox/Stage/Stage 2A/serpico_calculation_framework/doc/resultats_phase_activity.aux
+INPUT /Users/guillaume/Dropbox/Stage/Stage 2A/serpico_calculation_framework/doc/notice_micro_service_notation_serpico.out
+INPUT /Users/guillaume/Dropbox/Stage/Stage 2A/serpico_calculation_framework/doc/notice_micro_service_notation_serpico.out
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfcc1095.pfb
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfcc1200.pfb
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfit0900.pfb
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sftt0900.pfb
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfxc1440.pfb

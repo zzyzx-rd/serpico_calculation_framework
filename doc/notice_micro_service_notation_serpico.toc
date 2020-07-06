@@ -1,0 +1,12 @@
+\babel@toc {french}{}
+\contentsline {section}{\numberline {I}Les r\IeC {\'e}sulats calcul\IeC {\'e}s}{2}{section.1}
+\contentsline {subsection}{\numberline {I.1}Traitement de la jockerisation}{2}{subsection.1.1}
+\contentsline {section}{\numberline {II}Les param\IeC {\`e}tres en entr\IeC {\'e}e}{3}{section.2}
+\contentsline {subsection}{\numberline {II.1}Pour les crit\IeC {\`e}res}{3}{subsection.2.1}
+\contentsline {subsection}{\numberline {II.2}Poue les phases et activit\IeC {\'e}s}{4}{subsection.2.2}
+\contentsline {section}{\numberline {III}Les donn\IeC {\'e}es en sortie}{5}{section.3}
+\contentsline {section}{\numberline {IV}architecture de l'appli}{6}{section.4}
+\contentsline {subsection}{\numberline {IV.1}Le module de calcul par crit\IeC {\`e}re}{7}{subsection.4.1}
+\contentsline {subsection}{\numberline {IV.2}Le module de calcul par phase ou activit\IeC {\'e}}{8}{subsection.4.2}
+\contentsline {section}{\numberline {V}Remarques li\IeC {\'e}es \IeC {\`a} l'utilisation par l'appli Serpico}{8}{section.5}
+\contentsline {section}{\numberline {VI}Mise en prod et utilisation}{8}{section.6}

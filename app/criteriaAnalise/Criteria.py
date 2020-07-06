@@ -349,6 +349,6 @@ class Criteria:
             self.result['team'][team_id]["equalDevRatio"] = round(teamData.equalDevRatio, 2)
         self.jsonResponse = json.dumps(self.result, ensure_ascii=False, indent=4)
         # Write the json in a file (for tests only)
-        if not answerFile is None:
+        if answerFile is not None:
             with open(answerFile, 'w', encoding='utf-8') as f:
                 json.dump(self.result, f, ensure_ascii=False, indent=4)

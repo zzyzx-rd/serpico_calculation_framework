@@ -105,6 +105,7 @@ def getTeamId(jsonData, userId):
             if userId in teamMember:
                 team_Id = teamId
                 break
+    print("teamId : ", team_Id, file=sys.stderr)
     return team_Id
 
 

@@ -98,7 +98,7 @@ def getTeamId(jsonData, userId):
             should be called only by the constructor
             """
     team_Id = None
-    print("user id : ", file=sys.stderr)
+    print("user id : ", userId, file=sys.stderr)
     if getTeams(jsonData) is not None:
         for teamId, teamMember in getTeams(jsonData).items():
             print("teamMember : ", teamMember, file=sys.stderr)

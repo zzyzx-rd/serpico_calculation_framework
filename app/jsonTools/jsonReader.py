@@ -103,7 +103,8 @@ def getTeamId(jsonData, userId):
         for teamId, teamMember in getTeams(jsonData).items():
             print("teamID : ", teamId, file=sys.stderr)
             print("teamMember : ", teamMember, file=sys.stderr)
-            if str(userId) in teamMember:
+            if userId in teamMember:
+                print("oui", sys.stderr)
                 team_Id = teamId
                 break
     print("teamId : ", team_Id, file=sys.stderr)

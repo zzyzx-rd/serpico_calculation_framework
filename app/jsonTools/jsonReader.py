@@ -98,16 +98,12 @@ def getTeamId(jsonData, userId):
             should be called only by the constructor
             """
     team_Id = None
-    print("user id : ", userId, file=sys.stderr)
+    userId = int(userId)
     if getTeams(jsonData) is not None:
         for teamId, teamMember in getTeams(jsonData).items():
-            print("teamID : ", teamId, file=sys.stderr)
-            print("teamMember : ", teamMember, file=sys.stderr)
             if userId in teamMember:
-                print("oui", sys.stderr)
                 team_Id = teamId
                 break
-    print("teamId : ", team_Id, file=sys.stderr)
     return team_Id
 
 
@@ -120,7 +116,6 @@ def isUserGraded(jsonData, criteriaId, userId, teamId=None):
     @param teamId
     @return: boolean : true if the user is active or passive
     """
-    print("user id : ", userId, " teamId : ", teamId, file=sys.stderr)
     # if the user is graded as a user
     for grader, grades in getUserGrades(jsonData, criteriaId).items():
         if userId in grades.keys():

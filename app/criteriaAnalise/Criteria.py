@@ -86,7 +86,7 @@ class Criteria:
         build GradedUser{userID: GradedUser}
         """
         for user, weight in jr.getUserWeights(self._jsonData).items():
-            if jr.isUserGraded(self._jsonData, self.criteria_id, user):
+            if jr.isUserGraded(self._jsonData, self.criteria_id, jr.getTeamId(self._jsonData, user)):
                 self.GradedUser[user] = gu.GradedUser(user, self._jsonData, self.criteria_id)
                 self.totalGradedWeight += weight
                 self.nbGraded += 1

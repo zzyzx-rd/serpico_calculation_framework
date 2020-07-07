@@ -1,5 +1,5 @@
 import json
-
+import sys
 """
 should always be used to get data from the jsonData, if the structure of the json changes
 """
@@ -115,6 +115,7 @@ def isUserGraded(jsonData, criteriaId, userId, teamId=None):
     @param teamId
     @return: boolean : true if the user is active or passive
     """
+    print("user id : ", userId, " teamId : ", teamId, file=sys.stderr)
     # if the user is graded as a user
     for grader, grades in getUserGrades(jsonData, criteriaId).items():
         if userId in grades.keys():

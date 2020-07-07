@@ -66,6 +66,7 @@ def getTeamWeights(jsonData):
     else:
         return None
 
+
 def getUserGrades(jsonData, criteriaId):
     """ returns the dictionary with the user's grades
 
@@ -86,21 +87,40 @@ def getTeamGrades(jsonData, criteriaId):
     """
     return jsonData["criterias"][criteriaId]["teamGrades"]
 
+
 def getStageId(jsonData):
     return jsonData["stageId"]
 
+def getTeamId(jsonData, userId):
+    """get the team id in the jsonData
 
-def isUserGraded(jsonData, criteriaId, userId):
+            should be called only by the constructor
+            """
+    team_Id = None
+    if getTeams(jsonData) is not None:
+        for teamId, teamMember in getTeams(jsonData).items():
+            if id in teamMember:
+                team_Id = teamId
+                break
+    return team_Id
+
+
+def isUserGraded(jsonData, criteriaId, userId, teamId=None):
     """boolean, weather the user is graded(an active or a passive
 
     @param jsonData:  the dictionary with the data
     @param criteriaId: string, id of the analysed criteria
     @param userId: string, id of the user
+    @param teamId
     @return: boolean : true if the user is active or passive
     """
+    # if the user is graded as a user
     for grader, grades in getUserGrades(jsonData, criteriaId).items():
         if userId in grades.keys():
             return True
+    # if the user's team is graded
+    if teamId is not None:
+        return isTeamGraded(jsonData, criteriaId, teamId)
     return False
 
 

@@ -47,7 +47,7 @@ class GradedUser(Gradable):
         self.grades = []
         # Loop on the user grades
         for grader, user_grades in jr.getUserGrades(self._jsonData, self.criteria_id).items():
-            # if the grader has graded self (jockerisation)
+            # if the grader has graded this graded (jockerisation)
             if self.id in user_grades.keys():
                 self.grades.append((user_grades[self.id], jr.getUserWeight(self._jsonData, grader)))
                 self.totalWeight += jr.getUserWeight(self._jsonData, grader)

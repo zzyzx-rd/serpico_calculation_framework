@@ -91,6 +91,7 @@ def getTeamGrades(jsonData, criteriaId):
 def getStageId(jsonData):
     return jsonData["stageId"]
 
+
 def getTeamId(jsonData, userId):
     """get the team id in the jsonData
 
@@ -99,7 +100,7 @@ def getTeamId(jsonData, userId):
     team_Id = None
     if getTeams(jsonData) is not None:
         for teamId, teamMember in getTeams(jsonData).items():
-            if id in teamMember:
+            if userId in teamMember:
                 team_Id = teamId
                 break
     return team_Id

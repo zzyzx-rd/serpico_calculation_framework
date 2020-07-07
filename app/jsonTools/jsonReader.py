@@ -101,6 +101,7 @@ def getTeamId(jsonData, userId):
     print("user id : ", userId, file=sys.stderr)
     if getTeams(jsonData) is not None:
         for teamId, teamMember in getTeams(jsonData).items():
+            print("teamID : ", teamId, file=sys.stderr)
             print("teamMember : ", teamMember, file=sys.stderr)
             if userId in teamMember:
                 team_Id = teamId

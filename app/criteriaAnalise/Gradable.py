@@ -52,7 +52,7 @@ class Gradable:
         should be called only by the subclasses constructors
         """
         for (grade, weight) in self.grades:
-            self.weightedResult += grade * weight
+            self.weighdResult += grade * weight
             self.equalResult += grade
         self.weightedResult /= self.totalWeight
         self.equalResult /= self.numberGrader

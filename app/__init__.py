@@ -44,7 +44,8 @@ def create_app(test_config=None):
     @app.route('/')
     def hello():
         count = get_hit_count()
-        print("Appel de hello : ", file=sys.stdout)
+        print("Appel de hello : ", file=sys.stderr)
+        s
         return "Welcome on the first version of the framework of result calculation, powered by Serpico I have been " \
                "seen {} times.\n".format(count)
 

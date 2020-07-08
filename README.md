@@ -111,6 +111,8 @@ Remarque : il est possible de mettre autant d'ID de container que souhaité.
     * http://51.15.121.241:5000/main/criteriaComputation : url de computation des criterias
     * http://51.15.121.241:5000/main/stageComputation : url de computation des stages ou activity. 
 
+## Que 
+
 ## Flask help (deprecated)
 This section is useless now, run the docker container, it's better.
 ### Launch the app (in dev mode, for local tests)

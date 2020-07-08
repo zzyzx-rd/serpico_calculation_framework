@@ -135,7 +135,8 @@ def isTeamGraded(jsonData, criteriaId, teamId):
     @return: boolean : true if the team is graded (could not be because of the jockerisation or if the team contains
             only third
     """
-    for grader, grades in getTeamGrades(jsonData, criteriaId).items():
-        if teamId in grades.keys():
-            return True
+    if getTeamGrades(jsonData, criteriaId):
+        for grader, grades in getTeamGrades(jsonData, criteriaId).items():
+            if teamId in grades.keys():
+                return True
     return False

@@ -1,0 +1,35 @@
+\subsection{Pour une phase ou une activité}
+    \ser{} propose de calculer un certains nombre de moyennes sur les phases et activités. Comme le principe est le même pour une phase ou une activité, nous ne détaillerons les calculs qu'une seule fois, il faut prendre la population parmis les critères ou les phases, selon qu'on fasse les moyenes pour un phase ou une activité. Encore une fois, ces résultats sont calculés dans le cas pondéré et \equ, et \usr{} ou \te{} pour les valeurs globales. 
+    
+    On utilise les notations suivantes, dans le cas où elles sont définies : 
+    \begin{itemize}
+        \item result[u,crit] : le résultat (moyenne sur un critère ou phase) de u sur crit (un critère ou une phase).
+        \item relativeResult[u,crit] : le résultat relatif de u sur crit.
+        \item stdDev[u,crit] : l'écart type (moyenne sur un critère ou phase) de u sur crit (un critère ou une phase).
+        \item devRatio[u,crit] : le ratio de déviation de u sur crit.
+        \item weight(crit) : le poids du critère, nécessairement défini.
+        \item Crit : soit l'ensemble des critères, ou des phases, selon l'élément traité.
+    \end{itemize}
+    \subsubsection{Les résulats individuels}
+        \begin{itemize}
+            \item les moyennes de résultats (on parle aussi de résultat absolu dans le code existant de \ser).
+            \begin{eq}
+                \aR(u) = \sum_{c \in \crit} \dfrac{ \result(u) [u,c]}{\sum_{c \in \crit} \weight(c)} \\
+            \end{eq}
+            \item les moyennes de résultats relatifs 
+            \begin{eq}
+                \arr(u) = \sum_{c \in \crit} \dfrac{ \mbox{relativeResult} [u,c]}{\sum_{c \in \crit} \weight(c)}
+            \end{eq}
+            \item l'écart type moyen 
+            \begin{eq}
+                \asd = \sum_{c \in \crit} \dfrac{ \stdDev [u,c]}{\sum_{c \in \crit} \weight(c)}
+            \end{eq}
+            \item le ratio de déviation moyen : 
+            \begin{eq}
+                \arat = \sum_{c \in \crit} \dfrac{ \mbox{devRatio} [u,c]}{\sum_{c \in \crit} \weight(c)}
+            \end{eq}
+        \end{itemize}
+    \subsubsection{Les résultats globaux} 
+        On fait la moyenne de la même manière, sur tous les paramètres globaux calculés précédamment.
+        %! todo si le chef demande, sinon non
+        \textcolor{red}{Je n'ai pas détaillé les calculs, car c'est vraiment la même chose qu'au dessus. Si tu veux, je le fais, et sinon çà sera laissé au lecteur}.

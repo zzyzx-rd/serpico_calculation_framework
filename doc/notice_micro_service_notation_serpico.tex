@@ -92,9 +92,10 @@
     \end{itemize}
     \subsection{Traitement de la jockerisation}
     Le moyen le plus simple de  traiter la jockerisation est simplement de ne rien renseigner quand une note est manquante, l'application bouclera sur les notes renseignées, et fera les calculs de pondérations en conséquence. Le seul défaut est de devoir calculer la somme des poids pour chaque entité, ce qui est peu couteux. Pour le calcul des résultats globaux, on utilise les moyennes comme avant, car changer les formules aurait peu de sens, et apporterait uniquement de la complexité pour rien, et ne causerait que des problèmes.
+    
     \include{resultats_critere}
-
     \include{resultats_phase_activity}
+    
 \section{Les paramètres en entrée}
     Ce micro service prend en paramètre un json qui contient toutes les informations nécessaires pour calculer tous les résultats détaillés précédamment. Voici ci dessous les paramètres nécessaires : 
     \subsection{Pour les critères}

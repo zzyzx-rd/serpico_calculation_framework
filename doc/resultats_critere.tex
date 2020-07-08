@@ -1,0 +1,78 @@
+\subsection{Pour un critère}
+        Cette partie est la plus importante. Elle process l'ensemble des notes. Voici les résultats calculés : 
+        \subsubsection{Les résultats individuels}
+            On note : 
+            \begin{itemize}
+                \item[\BB] grade[grader $\rightarrow$ grader] : la note donnée par grader à graded
+                \item[\BB] graders(u) : perosnnes évaluant u (si u apparient à une \te, prends en compte la note attribuée à sa \te)
+                \item[\BB] graded(u) : les personnes évaluées par u (peut varier à cause de la jockerisation)
+                \item[\BB] graders : ensemble des notants du critère (décrit soit l'ensembe des \usr, soit des \te{} contenant au moins un \usr{} notant).
+                \item[\BB] graded : ensemble des entités évaluées pour ce critère.
+                \item[\BB] result(u) : le résultat de u
+                \item[\BB] weight(u) : le poids de u
+                \item[\BB] relativeResult(u) : le résultat relatif de u
+                \item[\BB] stdDev(u) : l'écart type de u
+                \item[\BB] team : membres de la team de 
+            \end{itemize}  
+            Les résultats individuels sont :   
+            \begin{itemize}
+                \item Result : simplement la moyenne de résultat pour un critère, résultat concernant les notés, soit les actifs et les passifs.
+                \begin{eq}
+                    \result(u) = \sum_{g \in \mbox{graders}(u)} \dfrac{ \grade{g}{u} \times \weight(g)}{\sum_{g \in \mbox{graders}(u)} \weight(g)}\\
+                \end{eq}
+                \item RelativeResult : formule appliquée à la moyenne de résultat, qui donne une idée de celle-ci, sans avoir les bornes de la note.
+                \begin{eq}
+                    \mbox{relativeResult}(u) = \dfrac{ \result(u) - \lb}{\ub - \lb}\\
+                \end{eq}
+                \item stdDev : concerne les notants (les \tp et les actifs). Cet écart type est réalisé sur les notes \emph{données} et non pas reçues. Il décrit à quel point l'utilisateur est d'accord avec les autres notants.
+                Il vaut : 
+                \begin{itemize}
+                    \item pour les \usr
+                    \begin{eq}
+                        \mbox{stdDev}(u) = \sqrt{\sum_{g \in \mbox{graded}(u)} \dfrac{ (\grade{u}{g} - \result(g))^2 \times \weight(g)}{ \sum_{g \in \mbox{graded}(u)} \weight(g)} }\\ 
+                    \end{eq}
+                    \item pour les \te
+                    \begin{eq}
+                        \mbox{stdDev}(\mbox{team}) = \sum_{g \in \mbox{team}} \dfrac{\mbox{stdDev}(g) \times \weight(g)}{\sum_{g \in \mbox{team}} \weight(g)} \\ 
+                    \end{eq}
+                \end{itemize}
+                
+                \item devRatio : un écart type ne parlant pas forcément, \ser{} propose un ratio entre l'acart type et un maximum théorique d'écart type.
+                Il vaut : 
+                \begin{eq}
+                    \mbox{devRatio}(u) = \dfrac{\mbox{stdDev}(u)}{\mbox{maxStdDev}}
+                \end{eq}
+                maxStdDev est l'écart type maximum théorique possible. Son calcul est détaillé plus bas. Il prend une valeur différente selon qu'on traite un \usr{} ou une \te. 
+            \end{itemize}
+        \subsubsection{Les résultats globaux (moyenne sur le critère)}
+            Les résultats globaux sont (pour rappel, en 4 fois, selon pondération et \te{} ou \usr) : 
+            \begin{itemize}
+                \item averageResult : moyenne des résultats sur le critère. Cette valeur n'est calculée que si les bornes de notation sont les mêmes pour tous les critères (n'a pas de sens sinon, est set à \texttt{null}).
+                \begin{eq}
+                    \avRe = \sum_{g \in \mbox{graded}} \dfrac{\result(g) * \weight(g)}{\sum_{g \in \mbox{graded}(u)}\weight(g)}\\
+                \end{eq}
+                \item averageRelativeResult : même principe que pour le résultat relatif individuel.
+                \begin{eq}
+                    \avReRe = \dfrac{\avRe - \lb}{\ub - \lb}\\
+                \end{eq}
+                \item averageStdDev : moyenne des écarts types.
+                \begin{eq}
+                    \avSd = \sum_{g \in \mbox{grader}} \dfrac{\stdDev(g) \times \weight(g)}{\sum_{g \in \mbox{grader}} \weight(g)}\\
+                \end{eq}
+                \item maxStdDev : maximum théorique des écarts types.
+                \begin{eq}
+                    \msd = \sum_{g \in \mbox{graded}} \dfrac{\max(\ub - \result(g), \result(g) - \lb)}{\sum_{g \in \mbox{graded}} \weight(g)}\\
+                \end{eq}
+                \item inertia : inertie des écarts type : 
+                \begin{eq}
+                    \iner =  \sum_{g \in \mbox{grader}} \dfrac{\stdDev(g)^2 \times \weight(g)}{\sum_{g \in \mbox{grader}} \weight(g)}\\
+                \end{eq}
+                \item maxInertia : carré de maxStdDev
+                \begin{eq}
+                    \miner = \msd^2\\
+                \end{eq}
+                \item les devRatio : le ratio de l'Inertie
+                \begin{eq}
+                    \mbox{devRatio} = \dfrac \iner \miner \\
+                \end{eq}
+            \end{itemize}

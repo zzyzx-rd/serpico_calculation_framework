@@ -95,7 +95,12 @@
     
     \include{resultats_critere}
     \include{resultats_phase_activity}
-    
+    \subsection{Remarque sur les notes d'équipes}
+    Comme les membres d'une \te{} ne peuvent pas noter leur \te{}, l'appli prends la moyenne arithmétique des notes attribuée aux membre de la \te{} par un membre, et considère que c'est la note attribuée à la team. 
+    Ainsi, pour un membre d'une team, la note vaut : 
+    \begin{eq}
+        \mbox{grade} [g \rightarrow \mbox{\te}] = \sum_{e \in \mbox{\te}}  \grade g e \\
+    \end{eq}
 \section{Les paramètres en entrée}
     Ce micro service prend en paramètre un json qui contient toutes les informations nécessaires pour calculer tous les résultats détaillés précédamment. Voici ci dessous les paramètres nécessaires : 
     \subsection{Pour les critères}

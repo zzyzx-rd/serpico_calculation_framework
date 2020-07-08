@@ -50,7 +50,7 @@ class GradedUser(Gradable):
         # Loop on the team results (if necessary)
         if self.team_id is not None:
             for grader, team_grades in jr.getTeamGrades(self._jsonData, self.criteria_id).items():
-                if self.team_id in team_grades.keys():
+                if self.team_id in team_grades.keys() and jr.getTeamId(self._jsonData, grader) != self.team_id:
                     self.grades.append((team_grades[self.team_id], jr.getUserWeight(self._jsonData, grader)))
                     self.totalWeight += jr.getUserWeight(self._jsonData, grader)
                     self.numberGrader += 1

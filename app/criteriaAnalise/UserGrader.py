@@ -46,12 +46,8 @@ class UserGrader:
 
         should be called only by the constructor
         """
-        self.team_id = None
-        if jr.getTeams(self._jsonData) is not None:
-            for teamId, teamMember in jr.getTeams(self._jsonData).items():
-                if self.id in teamMember:
-                    self.team_id = teamId
-                    break
+        self.team_id = jr.getTeamId(self._jsonData, self.id)
+        print("team id : ", self.team_id, file=sys.stderr)
 
     def setGrades(self):
         """gets the grades self gives in the json

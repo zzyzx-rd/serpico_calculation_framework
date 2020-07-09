@@ -51,8 +51,10 @@ class Gradable:
 
         should be called only by the subclasses constructors
         """
+        print("graded user : ", self.id, "total weight : ", self.totalWeight, file=sys.stderr)
         for (grade, weight) in self.grades:
-            self.weighdResult += grade * weight
+            print("grade : ", grade, " weight : ", weight, file=sys.stderr)
+            self.weightedResult += grade * weight
             self.equalResult += grade
         self.weightedResult /= self.totalWeight
         self.equalResult /= self.numberGrader

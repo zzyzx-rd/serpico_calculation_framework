@@ -119,6 +119,7 @@ class Criteria:
             self.totalUserGradersWeight = 1
         # teams (contains a least one grader)
         for grader in self.userGraders.values():
+            print("grader : ", grader.id, " :grader team : ", grader.team_id, " self.teamGraders.keys() : ",  self.teamGraders.keys(), file=sys.stderr)
             if (grader.team_id is not None) and (not grader.team_id in self.teamGraders.keys()):
                 self.teamGraders[grader.team_id] = tg.TeamGrader(grader.team_id, self)
                 self.totalTeamsGradersWeight += jr.getTeamWeights(self._jsonData)[grader.team_id]
@@ -182,6 +183,7 @@ class Criteria:
             self.averageEqualUserStdDev += grader.equalStdDev
         self.averageWeightedUserStdDev /= self.totalUserGradersWeight
         self.averageEqualUserStdDev /= self.nbGraders
+        print("nb team grader : ", self.nbGradersTeam, file=sys.stderr)
         if self.nbGradersTeam:
             for grader in self.teamGraders.values():
                 self.averageWeightedTeamStdDev += grader.weightedStdDev * jr.getTeamWeights(self._jsonData)[grader.id]
@@ -216,22 +218,8 @@ class Criteria:
         self.maxEqualUserStdDev /= self.nbGraded
         self.maxEqualUserStdDev = m.sqrt(self.maxEqualUserStdDev)
         # Team
-        if self.nbGradedTeams:
-            for graded in self.GradedTeam.values():
-                if graded.weightedResult < (self.lowerBound + self.upperBound) / 2:
-                    self.maxWeightedTeamStdDev += (self.upperBound - graded.weightedResult) ** 2 * \
-                                                  jr.getTeamWeights(self._jsonData)[graded.id]
-                else:
-                    self.maxWeightedTeamStdDev += (self.lowerBound - graded.weightedResult) ** 2 * \
-                                                  jr.getTeamWeights(self._jsonData)[graded.id]
-                if graded.equalResult < (self.lowerBound + self.upperBound) / 2:
-                    self.maxEqualTeamStdDev += (self.upperBound - graded.equalResult) ** 2
-                else:
-                    self.maxEqualTeamStdDev += (self.lowerBound - graded.equalResult) ** 2
-            self.maxWeightedTeamStdDev /= self.totalGradedTeamWeight
-            self.maxWeightedTeamStdDev = m.sqrt(self.maxWeightedTeamStdDev)
-            self.maxEqualTeamStdDev /= self.nbGradedTeams
-            self.maxEqualTeamStdDev = m.sqrt(self.maxEqualTeamStdDev)
+        self.maxWeightedTeamStdDev = self.maxWeightedUserStdDev
+        self.maxEqualTeamStdDev = self.maxEqualUserStdDev
 
     def computeInertia(self):
         """Computes the inertia values

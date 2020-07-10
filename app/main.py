@@ -6,6 +6,7 @@ from flask import (
 from app.jsonTools import jsonReader as jr
 from app.criteriaAnalise import Criteria as cr
 from app.stepAnalise import Step as s
+from app.Tests import tester
 import sys
 import json
 
@@ -13,7 +14,7 @@ import json
 bp = Blueprint('main', __name__, url_prefix='/main')
 
 
-@bp.route('/criteriaComputation', methods=['POST', 'GET'])
+@bp.route('/criteriaComputation', methods=['POST'])
 def postJsonCriteria():
     """send back the json answer with calculated values for a criteria
 
@@ -65,3 +66,7 @@ def postJsonStep():
     print("stepResult : ", result, file=sys.stderr)
     sys.stderr.flush()
     return result
+
+@bp.route('/tests', methods=['POST', 'GET'])
+def test():
+    return tester.testRunner()

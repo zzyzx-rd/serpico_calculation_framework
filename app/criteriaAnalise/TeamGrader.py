@@ -45,10 +45,7 @@ class TeamGrader:
         - weightedStdDev
         - equalStdDev
         """
-        print("team : ", self.id, file=sys.stderr)
         for grader in self.teamMember.values():
-            print("grader : ", grader,file=sys.stderr)
-            print("wsd : ", grader.weightedStdDev, file=sys.stderr)
             self.weightedStdDev += grader.weightedStdDev * jr.getUserWeight(self._jsonData, grader.id)
             self.equalStdDev += grader.equalStdDev
         self.weightedStdDev /= self.totalGraderWeight

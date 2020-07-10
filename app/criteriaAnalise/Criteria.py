@@ -119,7 +119,6 @@ class Criteria:
             self.totalUserGradersWeight = 1
         # teams (contains a least one grader)
         for grader in self.userGraders.values():
-            print("grader : ", grader.id, " :grader team : ", grader.team_id, " self.teamGraders.keys() : ",  self.teamGraders.keys(), file=sys.stderr)
             if (grader.team_id is not None) and (not grader.team_id in self.teamGraders.keys()):
                 self.teamGraders[grader.team_id] = tg.TeamGrader(grader.team_id, self)
                 self.totalTeamsGradersWeight += jr.getTeamWeights(self._jsonData)[grader.team_id]
@@ -183,7 +182,6 @@ class Criteria:
             self.averageEqualUserStdDev += grader.equalStdDev
         self.averageWeightedUserStdDev /= self.totalUserGradersWeight
         self.averageEqualUserStdDev /= self.nbGraders
-        print("nb team grader : ", self.nbGradersTeam, file=sys.stderr)
         if self.nbGradersTeam:
             for grader in self.teamGraders.values():
                 self.averageWeightedTeamStdDev += grader.weightedStdDev * jr.getTeamWeights(self._jsonData)[grader.id]

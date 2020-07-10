@@ -13,7 +13,7 @@ class UserGrader:
         criteria : instance of Criteria, the results must have been calculated
         userGrade : grades given to users
         team grades : grades given to team
-        totalGradedWeight : sum of the weight of the entity(team + user) self grades
+        totalGradedWeight : sum of the weight of the entity(team / user) given grades
         nbGraded : number of entity self grades
         team_id : string id of self team (None if he has no team)
     """
@@ -37,9 +37,9 @@ class UserGrader:
         self.equalStdDev = 0
         self.weightedDevRatio = 0
         self.equalDevRatio = 0
+        self.setTeamId()
         self.setGrades()
         self.calculStdDev()
-        self.setTeamId()
 
     def setTeamId(self):
         """gets the team id in the json
@@ -47,7 +47,6 @@ class UserGrader:
         should be called only by the constructor
         """
         self.team_id = jr.getTeamId(self._jsonData, self.id)
-        print("team id : ", self.team_id, file=sys.stderr)
 
     def setGrades(self):
         """gets the grades self gives in the json
@@ -67,7 +66,8 @@ class UserGrader:
         if self.team_id is not None and self.id in jr.getTeamGrades(self._jsonData, self.criteriaID).keys():
             for graded, team_grade in jr.getTeamGrades(self._jsonData, self.criteriaID)[self.id].items():
                 self.teamGrades[graded] = team_grade
-                self.totalGradedWeight += jr.getTeamWeights(self._jsonData)[graded]
+                self.totalGradedWeight += jr.getTeamWeights(self._jsonData)[graded] / len(
+                    jr.getTeams(self._jsonData)[graded])
                 self.nbGraded += 1
 
     def calculStdDev(self):
@@ -84,13 +84,19 @@ class UserGrader:
             gradedEqualResult = self.criteria.GradedUser[str(gradedId)].equalResult
             self.weightedStdDev += (gradedWeightedResult - self.userGrades[str(gradedId)]) ** 2 * userWeights[
                 str(gradedId)]
+            sys.stderr.flush()
             self.equalStdDev += (gradedEqualResult - self.userGrades[str(gradedId)]) ** 2
         # Sum on the teams grades
+        sys.stderr.flush()
         for gradedId in self.teamGrades.keys():
             gradedWeightedResult = self.criteria.GradedTeam[gradedId].weightedResult
             gradedEqualResult = self.criteria.GradedTeam[gradedId].equalResult
-            self.weightedStdDev += (gradedWeightedResult - self.teamGrades[gradedId]) ** 2 * teamWeights[gradedId]
+            sizeTeam = len(jr.getTeams(self._jsonData)[gradedId])
+            sys.stderr.flush()
+            self.weightedStdDev += (gradedWeightedResult - self.teamGrades[gradedId]) ** 2 * teamWeights[
+                gradedId] / sizeTeam
             self.equalStdDev += (gradedEqualResult - self.teamGrades[gradedId]) ** 2
+        sys.stderr.flush()
         self.weightedStdDev /= self.totalGradedWeight
         self.equalStdDev /= self.nbGraded
         self.weightedStdDev = m.sqrt(self.weightedStdDev)

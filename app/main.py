@@ -66,7 +66,7 @@ def postJsonStep():
     print(col.Colors.BOLD + " Step content : " + col.Colors.ENDC, json.dumps(content, indent=4), file=sys.stderr)
     # compute the results
     result = s.computeResult(content)
-    print(col.Colors.BOLD + "stepResult : " + + col.Colors.ENDC, result, file=sys.stderr)
+    print(col.Colors.BOLD + "stepResult : " + col.Colors.ENDC, result, file=sys.stderr)
     sys.stderr.flush()
     return result
 

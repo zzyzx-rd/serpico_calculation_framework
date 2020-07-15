@@ -1,0 +1,115 @@
+{"1178": {
+     "averageUsersWeightedResult": 35.75,
+     "averageUsersEqualResult": 35.75,
+     "averageTeamsWeightedResult": 0,
+     "averageTeamsEqualResult": 0,
+     "averageUsersWeightedRelativeResult": 0.71,
+     "averageUsersEqualRelativeResult": 0.71,
+     "averageTeamsWeightedRelativeResult": 0.0,
+     "averageTeamsEqualRelativeResult": 0.0,
+     "averageUsersWeightedStdDev": 11.25,
+     "averageUsersEqualStdDev": 11.25,
+     "averageTeamsWeightedStdDev": 11.25,
+     "averageTeamsEqualStdDev": 11.25,
+     "maxUsersWeightedStdDev": 35.75,
+     "maxUsersEqualStdDev": 35.75,
+     "maxTeamsWeightedStdDev": 35.75,
+     "maxTeamsEqualStdDev": 35.75,
+     "weightedUserInertia": 126.56,
+     "equalUserInertia": 126.56,
+     "weightedTeamInertia": 126.56,
+     "equalTeamInertia": 126.56,
+     "maxWeightedUserInertia": 1278.06,
+     "maxEqualUserInertia": 1278.06,
+     "maxWeightedTeamInertia": 1278.06,
+     "maxEqualTeamInertia": 1278.06,
+     "weightedUserDevRatio": 0.1,
+     "equalUserDevRatio": 0.1,
+     "weightedTeamDevRatio": 0.1,
+     "equalTeamDevRatio": 0.1,
+     "user": {
+         "298": {
+             "weightedResult": 35.75,
+             "equalResult": 35.75,
+             "weightedRelativeResult": 0.71,
+             "equalRelativeResult": 0.71
+         },
+         "284": {
+             "weightedStdDev": 11.25,
+             "equalStdDev": 11.25,
+             "weightedDevRatio": 0.31,
+             "equalDevRatio": 0.31
+         },
+         "303": {
+             "weightedStdDev": 11.25,
+             "equalStdDev": 11.25,
+             "weightedDevRatio": 0.31,
+             "equalDevRatio": 0.31
+         }
+     },
+     "team": {
+         "8": {
+             "weightedStdDev": 11.25,
+             "equalStdDev": 11.25,
+             "weightedDevRatio": 0.31,
+             "equalDevRatio": 0.31
+         }
+     }
+ }, "1179": {
+     "averageUsersWeightedResult": 36.75,
+     "averageUsersEqualResult": 36.75,
+     "averageTeamsWeightedResult": 0,
+     "averageTeamsEqualResult": 0,
+     "averageUsersWeightedRelativeResult": 0.62,
+     "averageUsersEqualRelativeResult": 0.62,
+     "averageTeamsWeightedRelativeResult": 0.0,
+     "averageTeamsEqualRelativeResult": 0.0,
+     "averageUsersWeightedStdDev": 11.75,
+     "averageUsersEqualStdDev": 11.75,
+     "averageTeamsWeightedStdDev": 11.75,
+     "averageTeamsEqualStdDev": 11.75,
+     "maxUsersWeightedStdDev": 36.75,
+     "maxUsersEqualStdDev": 36.75,
+     "maxTeamsWeightedStdDev": 36.75,
+     "maxTeamsEqualStdDev": 36.75,
+     "weightedUserInertia": 138.06,
+     "equalUserInertia": 138.06,
+     "weightedTeamInertia": 138.06,
+     "equalTeamInertia": 138.06,
+     "maxWeightedUserInertia": 1350.56,
+     "maxEqualUserInertia": 1350.56,
+     "maxWeightedTeamInertia": 1350.56,
+     "maxEqualTeamInertia": 1350.56,
+     "weightedUserDevRatio": 0.1,
+     "equalUserDevRatio": 0.1,
+     "weightedTeamDevRatio": 0.1,
+     "equalTeamDevRatio": 0.1,
+     "user": {
+         "298": {
+             "weightedResult": 36.75,
+             "equalResult": 36.75,
+             "weightedRelativeResult": 0.62,
+             "equalRelativeResult": 0.62
+         },
+         "284": {
+             "weightedStdDev": 11.75,
+             "equalStdDev": 11.75,
+             "weightedDevRatio": 0.32,
+             "equalDevRatio": 0.32
+         },
+         "303": {
+             "weightedStdDev": 11.75,
+             "equalStdDev": 11.75,
+             "weightedDevRatio": 0.32,
+             "equalDevRatio": 0.32
+         }
+     },
+     "team": {
+         "8": {
+             "weightedStdDev": 11.75,
+             "equalStdDev": 11.75,
+             "weightedDevRatio": 0.32,
+             "equalDevRatio": 0.32
+         }
+     }
+ }}

@@ -1,0 +1,58 @@
+{
+  "activity_element_form": {
+    "name": "generatedActivity",
+    "activeModifiableStages": {
+      "0": {
+        "activeWeight": "100",
+        "name": "generated Stage 1",
+        "startdate": "13/07/2020",
+        "gstartdate": "13/07/2020",
+        "enddate": "13/07/2020",
+        "genddate": "13/07/2020",
+        "mode": "1",
+        "visibility": "3",
+        "criteria": {
+          "0": {
+            "weight": "58",
+            "cName": "205",
+            "type": "1",
+            "forceCommentSign": "smaller",
+            "forceCommentValue": "",
+            "lowerbound": "0,0",
+            "upperbound": "5,0",
+            "step": "0,50",
+            "targetValue": "70",
+            "comment": ""
+          },
+          "1": {
+            "weight": "42",
+            "cName": "204",
+            "type": "1",
+            "forceCommentSign": "smaller",
+            "forceCommentValue": "",
+            "lowerbound": "0,0",
+            "upperbound": "5,0",
+            "step": "1,00",
+            "targetValue": "70",
+            "comment": ""
+          }
+        },
+        "independantUniqueTeamParticipations": {
+          "0": {
+            "team": "8",
+            "leader": "1",
+            "type": "1",
+            "precomment": ""
+          },
+          "1": {
+            "team": "8",
+            "type": "1",
+            "precomment": ""
+          }
+        }
+      }
+    },
+    "_token": "iGP9T-Gq-QYIDj_443qXjSGO8ern_RG4B0AATCg-3-I"
+  },
+  "clicked-btn": "update"
+}

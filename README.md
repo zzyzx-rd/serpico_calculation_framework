@@ -111,8 +111,16 @@ Remarque : il est possible de mettre autant d'ID de container que souhaité.
     * http://51.15.121.241:5000/main/criteriaComputation : url de computation des criterias
     * http://51.15.121.241:5000/main/stageComputation : url de computation des stages ou activity. 
 
-## Que 
-
+## Faire du ménage avec docker
+Si jamais vous installez docker sur votre machine, vous risquez d'avoir plein de trucs qui trainent.
+Pour faire du ménage.
+* Effacer les images mortes (peut occuper des dizaines de Gi) :
+    > docker image prune
+* Effacer les containers:
+    > docker container prune
+    
+    
+                                                                      
 ## Flask help (deprecated)
 This section is useless now, run the docker container, it's better.
 ### Launch the app (in dev mode, for local tests)

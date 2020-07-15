@@ -6,7 +6,9 @@ from flask import (
 from app.jsonTools import jsonReader as jr
 from app.criteriaAnalise import Criteria as cr
 from app.stepAnalise import Step as s
+from app import Colors as col
 from app.Tests import tester
+from app.Tests import integrationTester as it
 import sys
 import json
 
@@ -22,13 +24,14 @@ def postJsonCriteria():
     @warning doesn't check if the json has the right structure
     @return: a json, with all calculated values
     """
-    print("request json : ", request.get_json(), file=sys.stderr)
     # check the request has the correct format
     if not request.is_json:
         error = 'a json file is required'
         return error
     # get the json content (get_json send a dictionary)
     content = request.get_json()
+    prettyContent = json.dumps(content, indent=4)
+    print(col.Colors.BOLD + "sended Criteria data : " + col.Colors.ENDC + prettyContent, file=sys.stderr)
     # # write the json answer
     strResult = "{"
     # Loop on the criteria
@@ -41,7 +44,7 @@ def postJsonCriteria():
     for criteriaId in jr.getCriteriasId(content):
         criteria = cr.Criteria(content, criteriaId)
         result[criteria.criteria_id] = criteria.result
-    print("result : ", strResult, file=sys.stderr)
+    print(col.Colors.BOLD + "Criteria result : " + col.Colors.ENDC, strResult, file=sys.stderr)
     sys.stderr.flush()
     return json.dumps(result, indent=True)
 
@@ -60,13 +63,17 @@ def postJsonStep():
         return error
     # get the json content
     content = request.get_json()
-    print("content : ", content, file=sys.stderr)
+    print(col.Colors.BOLD + " Step content : " + col.Colors.ENDC, json.dumps(content, indent=4), file=sys.stderr)
     # compute the results
     result = s.computeResult(content)
-    print("stepResult : ", result, file=sys.stderr)
+    print(col.Colors.BOLD + "stepResult : " + + col.Colors.ENDC, result, file=sys.stderr)
     sys.stderr.flush()
     return result
 
+
+@bp.route('/testIntegration', methods=['GET'])
+def testIntegration():
+    return it.runTest()
 @bp.route('/tests', methods=['POST', 'GET'])
 def test():
     return tester.testRunner()

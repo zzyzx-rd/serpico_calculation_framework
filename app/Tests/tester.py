@@ -5,10 +5,7 @@ import json
 import requests
 import os
 import os.path as osp
-from app.Tests import Colors as col
-from flask import (
-    Blueprint, flash, g, redirect, render_template, request, session, url_for, Flask
-)
+from app import Colors as col
 
 SOURCE_CRITERIA_PATH = "app/Tests/dataToSend/"
 RESPONSE_CRITERIA_PATH = "app/Tests/expectedData/"
@@ -22,6 +19,7 @@ def getFiles(path):
     res = []
     for file in sourceFiles:
         res.append(file)
+    res.sort()
     return res
 
 

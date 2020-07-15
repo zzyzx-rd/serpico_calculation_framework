@@ -63,7 +63,7 @@ class UserGrader:
         if self.totalGradedWeight == 0:
             self.totalGradedWeight += 1
         # team grades
-        if self.team_id is not None and self.id in jr.getTeamGrades(self._jsonData, self.criteriaID).keys():
+        if self.team_id is not None and jr.getTeamGrades(self._jsonData, self.criteriaID) and self.id in jr.getTeamGrades(self._jsonData, self.criteriaID).keys():
             for graded, team_grade in jr.getTeamGrades(self._jsonData, self.criteriaID)[self.id].items():
                 self.teamGrades[graded] = team_grade
                 self.totalGradedWeight += jr.getTeamWeights(self._jsonData)[graded] / len(

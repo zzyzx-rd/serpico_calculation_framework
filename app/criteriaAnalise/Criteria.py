@@ -92,6 +92,8 @@ class Criteria:
                 self.nbGraded += 1
         if not self.totalGradedWeight:
             self.totalGradedWeight = 1
+        if not self.nbGraded:
+            self.nbGraded = 1
 
     def setGradedTeams(self):
         """Instantiates all the gradedTeams

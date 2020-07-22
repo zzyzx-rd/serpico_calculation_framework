@@ -116,6 +116,8 @@ def isUserGraded(jsonData, criteriaId, userId, teamId=None):
     @param teamId
     @return: boolean : true if the user is active or passive
     """
+    if not getUserGrades(jsonData, criteriaId):
+        return False
     # if the user is graded as a user
     for grader, grades in getUserGrades(jsonData, criteriaId).items():
         if userId in grades.keys():

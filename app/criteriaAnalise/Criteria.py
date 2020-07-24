@@ -113,18 +113,19 @@ class Criteria:
         build userGraders and teamGraders {graderID: grader}
         """
         # users
-        for graderID in jr.getUserGrades(self._jsonData, self.criteria_id).keys():
+        for graderID in jr.getUserGrades(self._jsonData, self.criteria_id).keys() | \
+                        jr.getTeamGrades(self._jsonData, self.criteria_id).keys():
             self.userGraders[graderID] = ug.UserGrader(graderID, self)
             self.totalUserGradersWeight += jr.getUserWeight(self._jsonData, graderID)
             self.nbGraders += 1
-        if self.totalUserGradersWeight == 0:
-            self.totalUserGradersWeight = 1
         # teams (contains a least one grader)
         for grader in self.userGraders.values():
             if (grader.team_id is not None) and (not grader.team_id in self.teamGraders.keys()):
                 self.teamGraders[grader.team_id] = tg.TeamGrader(grader.team_id, self)
                 self.totalTeamsGradersWeight += jr.getTeamWeights(self._jsonData)[grader.team_id]
                 self.nbGradersTeam += 1
+        if self.totalUserGradersWeight == 0:
+            self.totalUserGradersWeight = 1
 
     def calculateResult(self):
         """calculates the global results
@@ -167,8 +168,9 @@ class Criteria:
             self.weightedUserDevRatio = self.weightedUserInertia / self.maxWeightedUserStdDev ** 2
         if self.maxEqualUserStdDev:
             self.eqalUserDevRatio = self.equalUserInertia / self.maxEqualUserStdDev ** 2
-        if self.nbGradersTeam:
+        if self.nbGradersTeam and self.maxWeightedTeamStdDev:
             self.weightedTeamDevRatio = self.weightedTeamInertia / self.maxWeightedTeamStdDev ** 2
+        if self.nbGradersTeam and self.maxEqualTeamStdDev:
             self.equalTeamDevRatio = self.equalTeamInertia / self.maxEqualTeamStdDev ** 2
 
     def computeStdDev(self):

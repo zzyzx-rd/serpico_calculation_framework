@@ -74,6 +74,8 @@ def getUserGrades(jsonData, criteriaId):
     @param criteriaId: string, id of the analysed criteria
     @return: dictionary with the grades of the user {grader_id:{graded_id}}, graded is a user
     """
+    if not jsonData["criterias"][criteriaId]["userGrades"]:
+        return {}
     return jsonData["criterias"][criteriaId]["userGrades"]
 
 
@@ -85,6 +87,8 @@ def getTeamGrades(jsonData, criteriaId):
     @return: dictionary with the grades of the team {grader_id:{graded_id}}, graded is a team, grader a user (team can't
             give grades)
     """
+    if not jsonData["criterias"][criteriaId]["teamGrades"]:
+        return {}
     return jsonData["criterias"][criteriaId]["teamGrades"]
 
 
@@ -116,12 +120,11 @@ def isUserGraded(jsonData, criteriaId, userId, teamId=None):
     @param teamId
     @return: boolean : true if the user is active or passive
     """
-    if not getUserGrades(jsonData, criteriaId):
-        return False
-    # if the user is graded as a user
-    for grader, grades in getUserGrades(jsonData, criteriaId).items():
-        if userId in grades.keys():
-            return True
+    if getUserGrades(jsonData, criteriaId):
+        # if the user is graded as a user
+        for grader, grades in getUserGrades(jsonData, criteriaId).items():
+            if userId in grades.keys():
+                return True
     # if the user's team is graded
     if teamId is not None:
         return isTeamGraded(jsonData, criteriaId, teamId)

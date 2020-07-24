@@ -102,9 +102,10 @@ CONTAINER ID        IMAGE                             COMMAND                  C
     > docker container rm *container_id* -f 
 
 Remarque : il est possible de mettre autant d'ID de container que souhaité.
-* Pour lancer le service, il suffit de faire comme sur votre machine personnelle, soit :
+* Pour rebuild le container (après un pull)
     >docker-compose build                                                                               
-    >docker-compose up
+* Pour lancer le service, il suffit de faire comme sur votre machine personnelle, soit :
+    > docker-compose up
 
 * Enfin, pour appeler ce service, il faut utiliser l'une des 3 url suivantes : 
     * http://51.15.121.241:5000/ : page du hello world, utile pour tester la disponibilité du serice sans passer par Serpico

@@ -21,6 +21,8 @@ class TeamGrader:
         self.criteria = criteria
         self.totalGraderWeight = 0
         self.nbTeamMember = 0
+        self.weightedDevRatio = 0
+        self.equalDevRatio = 0
         self.teamMember = {}
         self.setTeamMembers()
         # std dev
@@ -57,5 +59,7 @@ class TeamGrader:
         - weightedDevRatio
         - equalDevRatio
         """
-        self.weightedDevRatio = self.weightedStdDev / self.criteria.maxWeightedTeamStdDev
-        self.equalDevRatio = self.equalStdDev / self.criteria.maxWeightedTeamStdDev
+        if self.criteria.maxWeightedTeamStdDev:
+            self.weightedDevRatio = self.weightedStdDev / self.criteria.maxWeightedTeamStdDev
+        if self.criteria.maxWeightedTeamStdDev:
+            self.equalDevRatio = self.equalStdDev / self.criteria.maxWeightedTeamStdDev
